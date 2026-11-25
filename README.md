@@ -2,27 +2,68 @@
 
 [![tests](https://github.com/itsmeck24/captionfix/actions/workflows/ci.yml/badge.svg)](https://github.com/itsmeck24/captionfix/actions/workflows/ci.yml)
 
-CaptionFix captions recorded lectures with Zoom's speech-to-text API and checks them against a second model,
-Whisper, running on the laptop. Where the two disagree about a course term, the word is marked, and the
-stretches most likely to be wrong go on a short list a TA can work through in a few minutes. The goal is
-verified captions the same day a lecture is recorded, for students who depend on them.
+Lecture captions that a student who can't hear the lecture can trust.
 
-Zoom's captions are very good on ordinary speech. On 13 hours of MIT lectures they got 95 to 97% of words right,
-but about 1 in 7 course terms wrong ("branch risk prediction" for "branch misprediction", "on aligned" for
-"unaligned"), and a wrong caption looks just as sure as a right one. A hearing student catches it. A deaf
-student copies it into their notes.
+[![The CaptionFix project page](docs/site.png)](docs/site.png)
 
-[![The review page](site/media/review.png)](site/media/review.png)
+## The problem
 
-## What it does
+Many students read a lecture instead of hearing it: students who are deaf or hard of hearing, students
+listening in a second language, anyone rewatching a recording. For them the captions are the lecture.
 
-- `captionfix run lecture.mp4 --slides slides.pdf` writes captions (`captions.vtt`), a review list and the
+Zoom's automatic captions are good. On 13 hours of MIT lectures they got 95 to 97% of all words right. But they
+got about **1 in 7 course terms** wrong, the exact words the class is about:
+
+| The professor said | Zoom's captions said |
+| --- | --- |
+| branch **misprediction** | branch **risk prediction** |
+| **unaligned** | **on aligned** |
+| x **XOR** y | x, x **or** y |
+| function **inlining** | function **inline** |
+
+A wrong caption looks exactly as sure of itself as a right one. A student who can hear notices. A student who
+can't copies the wrong word into their notes, searches for it, and studies it. Having a person check every
+caption by hand fixes this, but it takes as long as the lecture, so verified captions usually arrive days later.
+
+## What CaptionFix does
+
+CaptionFix gets a second opinion on Zoom's captions and tells a person exactly where to look.
+
+1. **Zoom writes the captions.** The recording goes to Zoom's speech-to-text service.
+2. **A second model listens too.** An open-source model (Whisper) transcribes the same recording on the laptop.
+   Where the two disagree, something is probably wrong.
+3. **Course terms that are in doubt are marked**, using the lecture slides to know which words matter, so a
+   student can see which words to double-check.
+4. **A TA gets a short review list.** Instead of rewatching the whole lecture, the TA checks the 10% most likely
+   to be wrong, about **6 minutes per lecture hour**, and exports corrected captions the same day.
+
+**What it achieves:** those 6 minutes find **37 to 45% of the course-term mistakes**. Random spot checks of the
+same length find 12%, so the list is three to four times better than looking at random. This held on lectures
+from a course that was only added after everything was tuned.
+
+**What did not work, and is turned off:** giving Zoom the slides as a vocabulary list, and letting the software
+fix words by itself. Both were tested and made the captions worse overall. The numbers are below.
+
+The project page lets you try it with the sound off: three real Zoom captions, one wrong word each.
+
+[![Guess what the professor said](docs/quiz.png)](docs/quiz.png)
+
+And it shows what a student would see: the captions over the slide that was up, a course term marked with what
+the second model heard (Zoom wrote "is this an immutable or immutable type?" where the professor said "immutable
+or mutable"), and a list of the course terms that jumps to where each one is said.
+
+[![The student player](docs/player.png)](docs/player.png)
+
+The TA's review page lists only the flagged stretches. Play one, fix it or press enter if it is right, export.
+
+[![The review page](docs/review.png)](docs/review.png)
+
+## For developers
+
+- `captionfix run lecture.mp4 --slides slides.pdf` writes captions (`captions.vtt`), the review list and the
   course terms in doubt. Zoom recordings (.mp4 or .m4a) work as they are.
-- Course terms are words from the slides plus rare words. A course term that Whisper heard differently is
-  marked with what Whisper heard, instead of being shown as if it were certain.
-- The review list covers 10% of the lecture by default. Disagreements about course terms come first.
-- `captionfix review out/lecture1` opens the review page: play a stretch, fix it or press enter if it is right,
-  export the reviewed captions.
+- Course terms are words from the slides plus rare words (Zipf frequency under 3).
+- `captionfix review out/lecture1` opens the review page.
 - `--engine whisper` runs everything locally, with no key and nothing sent anywhere.
 
 ## How it works

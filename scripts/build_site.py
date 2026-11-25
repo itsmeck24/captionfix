@@ -166,9 +166,9 @@ def main() -> None:
         "stats": [
             {"value": f"1 in {per:.0f}", "unit": "course terms",
              "label": f"Zoom gets wrong, or writes when it was not said, on {test['minutes'] / 60:.0f} hours of MIT lectures"},
-            {"value": "\u2013".join(f"{100 * r['caught']:.0f}" for r in rows) + "%", "unit": "of them",
-             "label": "land in the 10% of the lecture CaptionFix sends a TA to, on the test and fresh lectures "
-                      f"({100 * main_row['random']:.0f}% for random spot checks)"},
+            {"value": "\u2013".join(f"{100 * r['caught']:.0f}" for r in rows) + "%", "unit": "",
+             "label": "of those mistakes land in the 10% of the lecture CaptionFix sends a TA to "
+                      f"({100 * main_row['random']:.0f}% for random spot checks of the same length)"},
             {"value": f"{main_row['minutes']:.0f}", "unit": "minutes",
              "label": "of TA time per lecture hour, instead of rewatching the whole hour"},
             {"value": f"{test['lectures'] + (fresh['lectures'] if fresh else 0)}", "unit": "lectures",

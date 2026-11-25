@@ -59,7 +59,7 @@ function render(d) {
       pct(l.review_zoom["course_first@0.1"].course_caught / Math.max(1, l.review_zoom.course_errors), 0)]), [0, 1, 1, 1, 1, 1]);
 
   document.getElementById("misheard").innerHTML = d.misheard.map(m =>
-    `<div><span>Zoom: <s>${esc(m.zoom)}</s></span><span>said: <b>${esc(m.said)}</b></span></div>`).join("");
+    `<div><span>Zoom: <s>${esc(m.wrong)}</s></span><span>said: <b>${esc(m.said)}</b></span></div>`).join("");
   player(d.player);
   quiz(d.misheard);
 }
@@ -117,8 +117,11 @@ function player(p) {
   const doubtBox = root.querySelector("#pl-doubt");
   const word = w => w.kind === "fixed" ? `<span class="fixed" title="Zoom wrote: ${esc(w.was || "")}">${esc(w.text)}</span>`
     : w.kind === "doubt" && doubtBox.checked ? `<span class="doubt">${esc(w.text)}<sup>${esc(w.was)}?</sup></span>` : esc(w.text);
+  const first = p.words.find(w => w.kind);
+  let started = false;
   const draw = () => {
-    const t = audio.currentTime;
+    // before the first play, show the moment with the first mark so the page opens on it
+    const t = started ? audio.currentTime : (first ? first.t + 0.2 : 0);
     const c = cues.find(c => t >= c[0].t - 0.2 && t <= c[c.length - 1].e + 0.8) || [];
     cap.innerHTML = c.map(word).join(" ");
     cap.style.visibility = c.length ? "visible" : "hidden";
@@ -129,16 +132,22 @@ function player(p) {
   };
   const icon = on => on ? '<svg viewBox="0 0 14 14"><rect x="2" y="1" width="3.5" height="12"/><rect x="8.5" y="1" width="3.5" height="12"/></svg>'
                         : '<svg viewBox="0 0 14 14"><path d="M2 1l11 6-11 6z"/></svg>';
-  btn.onclick = () => audio.paused ? audio.play() : audio.pause();
+  btn.onclick = () => {
+    if (!started && first) audio.currentTime = Math.max(0, first.t - 4);
+    started = true;
+    audio.paused ? audio.play() : audio.pause();
+  };
   audio.onplay = () => { btn.innerHTML = icon(true); btn.classList.add("on"); };
   audio.onpause = () => { btn.innerHTML = icon(false); btn.classList.remove("on"); };
   audio.ontimeupdate = draw;
   doubtBox.onchange = draw;
   root.querySelector("#pl-bar").onclick = e => {
     const r = e.currentTarget.getBoundingClientRect();
+    started = true;
     audio.currentTime = (audio.duration || 80) * (e.clientX - r.left) / r.width; draw();
   };
   root.querySelectorAll("#pl-gloss button").forEach(b => b.onclick = () => {
+    started = true;
     audio.currentTime = Math.max(0, +b.dataset.t - 1.5); audio.play();
   });
   draw();
