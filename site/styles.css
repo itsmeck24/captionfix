@@ -80,7 +80,7 @@ h1 em, h2 em { font-style: normal; color: var(--blue); }
 .tile span { width: 42%; aspect-ratio: 1; border-radius: 50%; background: #56607a; display: grid; place-items: center; }
 .caption-bar { position: absolute; left: 50%; bottom: 6%; transform: translateX(-50%); width: 86%; text-align: center; font: 500 clamp(13px, 1.5vw, 18px)/1.4 var(--sans); }
 .caption-bar span { background: rgba(0, 0, 0, .78); color: #fff; padding: 4px 10px; border-radius: 6px; box-decoration-break: clone; -webkit-box-decoration-break: clone; }
-.swap { position: relative; display: inline-block; }
+.swap { position: relative; }
 .meeting-bottom { display: flex; justify-content: center; gap: 10px; padding: 12px 0 4px; }
 .meeting-bottom i { width: 34px; height: 34px; border-radius: 10px; background: var(--night-2); display: inline-block; }
 .meeting-bottom i.cc { background: var(--blue); }

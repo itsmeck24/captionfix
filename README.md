@@ -4,7 +4,9 @@
 
 Lecture captions that a student who can't hear the lecture can trust.
 
-[![The CaptionFix project page](docs/site.png)](docs/site.png)
+**Project page: https://captionfix-chi.vercel.app** (try the sound-off quiz and the student player)
+
+[![The CaptionFix project page](docs/site.png)](https://captionfix-chi.vercel.app)
 
 ## The problem
 
