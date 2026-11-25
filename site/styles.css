@@ -121,8 +121,6 @@ h1 em, h2 em { font-style: normal; color: var(--blue); }
 .step { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); padding: 22px; }
 .step::before { counter-increment: step; content: "0" counter(step); font: 500 12px var(--mono); color: var(--blue); display: block; margin-bottom: 14px; }
 .step p { color: var(--ink-soft); font-size: 15px; margin-top: 10px; }
-.rule { margin-top: 22px; padding: 18px 20px; border-left: 3px solid var(--blue); background: var(--blue-tint); border-radius: 0 12px 12px 0; color: var(--ink-soft); }
-.rule b { color: var(--ink); }
 
 /* tables */
 .table-wrap { margin-top: 40px; overflow-x: auto; background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); }
@@ -133,9 +131,6 @@ td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
 tr:last-child td { border-bottom: 0; }
 tr.ship td { font-weight: 600; background: #fafcff; }
 tr.ship td:first-child { color: var(--blue); }
-.notes { margin-top: 26px; display: grid; gap: 12px; color: var(--ink-soft); max-width: 50em; }
-.notes b { color: var(--ink); }
-.subhead { margin-top: 64px; }
 
 /* review */
 .shot { margin-top: 40px; border-radius: var(--radius); border: 1px solid var(--line); overflow: hidden; background: var(--card); box-shadow: 0 30px 60px -40px rgba(15, 23, 41, .35); }

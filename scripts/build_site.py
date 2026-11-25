@@ -141,27 +141,25 @@ def main() -> None:
     test = json.loads((ROOT / "results/test.json").read_text())
     fresh_path = ROOT / "results/fresh.json"
     fresh = json.loads(fresh_path.read_text()) if fresh_path.exists() else None
-    dev = json.loads((ROOT / "results/dev_tuning_zoom.json").read_text())
     (SITE / "clips").mkdir(parents=True, exist_ok=True)
     for old in list((SITE / "clips").glob("*.mp3")) + list((SITE / "media").glob("*-p*.png")):
         old.unlink()
 
     def outcome(name: str, res: dict) -> dict:
         z, cf, r = res["systems"]["zoom"], res["systems"]["captionfix_zoom"], res["review_zoom"]
-        return {"name": name, "terms": z["course_total"], "zoom": z["course_mistakes"],
+        return {"name": name, "hours": res["minutes"] / 60, "terms": z["course_total"], "zoom": z["course_mistakes"],
                 "captionfix": cf["course_mistakes"], "caught": r["course_first@0.1"]["course_share_caught"],
                 "caught_all": r["course_first@0.1"]["share_caught"],
                 "random": r["random@0.1"]["course_share_caught"],
                 "minutes": r["course_first@0.1"]["review_minutes"] / (res["minutes"] / 60)}
 
-    rows = [outcome(f"Test: {test['lectures']} lectures, 3 courses", test)]
+    rows = [outcome(f"{test['lectures']} lectures from 3 courses", test)]
     if fresh:
-        rows.append(outcome(f"Fresh: {fresh['lectures']} lectures, a course never looked at", fresh))
+        rows.append(outcome(f"{fresh['lectures']} lectures from a 4th course, added at the end", fresh))
     z = test["systems"]["zoom"]
     main_row = rows[-1] if fresh else rows[0]
     per = z["course_total"] / max(1, z["course_mistakes"])
     data = {
-        "test": test, "fresh": fresh, "vocab": dev["vocabulary"],
         "outcome": rows,
         "stats": [
             {"value": f"1 in {per:.0f}", "unit": "course terms",
@@ -176,15 +174,11 @@ def main() -> None:
         ],
         "problem": (f"On {test['lectures']} MIT test lectures Zoom's captions were {100 * (1 - z['wer']):.0f}% right "
                     f"word for word, yet about 1 in {per:.0f} course terms came out wrong."),
-        "intro": (f"{test['lectures']} test lectures ({test['minutes'] / 60:.1f} hours) from three MIT courses"
-                  + (f", plus {fresh['lectures']} lectures ({fresh['minutes'] / 60:.1f} hours) from a fourth course that "
-                     "was only downloaded after every setting was fixed" if fresh else "")
-                  + ". Every setting was chosen on 3 separate tuning lectures by rules written down before scoring. "
-                  "A course term is a word from the slides or a rare word (Zipf frequency under 3). A course-term "
-                  "mistake is one the captions got wrong, or one the transcript wrote that MIT's captions do not have."),
+        "intro": ("Recorded MIT OpenCourseWare lectures, scored against MIT's own human captions. A course term "
+                  "is a word from the slides or a rare word. The review list covers 10% of each lecture, about "
+                  "6 minutes per hour; random checks of the same length are the comparison."),
         "misheard": misheard(QUIZ),
         "player": build_player(*PLAYER),
-        "notes": json.loads((ROOT / "results/notes.json").read_text()),
     }
     (SITE / "data.json").write_text(json.dumps(data, indent=1))
     print("wrote site/data.json, player", data["player"]["lecture"], data["player"]["start"])
