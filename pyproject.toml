@@ -6,7 +6,7 @@ readme = "README.md"
 requires-python = ">=3.12,<3.13"
 license = "MIT"
 dependencies = [
-    "mlx-whisper>=0.4",
+    "mlx-whisper>=0.4; sys_platform == 'darwin' and platform_machine == 'arm64'",  # Whisper runs on Apple silicon
     "numpy",
     "pymupdf>=1.24",
     "wordfreq>=3.1",
