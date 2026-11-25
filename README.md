@@ -40,10 +40,6 @@ CaptionFix gets a second opinion on Zoom's captions and tells a person exactly w
 4. **A TA reviews six minutes per lecture hour.** The most likely mistakes, 10% of the lecture, go on a review
    list. The TA plays each one, fixes or accepts it, and exports the captions the same day.
 
-[![The student view: captions over the slide, with a course term marked](docs/player.png)](https://captionfix-chi.vercel.app/#try)
-
-[![The TA's review page](docs/review.png)](docs/review.png)
-
 ## Results
 
 Recorded MIT OpenCourseWare lectures, scored against MIT's own human captions. Settings were chosen on 3
