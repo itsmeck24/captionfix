@@ -1,0 +1,13 @@
+{
+  "margin": 2.0,
+  "min_similarity": 0.8,
+  "sources": [
+    "sound",
+    "second",
+    "loop"
+  ],
+  "score_with_prompt": true,
+  "budget": 0.1,
+  "vocabulary": "none",
+  "slides": 3
+}

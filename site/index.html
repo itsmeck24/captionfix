@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CaptionFix: lecture captions a deaf student can trust</title>
+<meta name="description" content="Zoom captions for recorded lectures, checked against a second speech model and the slides. Course terms in doubt are marked for students, and a TA gets a short list to verify the same day.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230b5cff'/%3E%3Crect x='12' y='38' width='40' height='9' rx='3' fill='%23fff'/%3E%3Crect x='18' y='24' width='28' height='8' rx='3' fill='%23fff' opacity='.6'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+<a class="skip" href="#main">skip to content</a>
+
+<header class="nav" id="nav">
+  <div class="wrap">
+    <a class="brand" href="#top">captionfix<span>.</span></a>
+    <nav>
+      <a href="#quiz">read it</a>
+      <a href="#try">try it</a>
+      <a href="#how">how it works</a>
+      <a href="#results">results</a>
+      <a href="#review">review</a>
+      <a href="#run">run it</a>
+      <a class="pill" href="https://github.com/itsmeck24/captionfix">GitHub ↗</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+<section class="hero wrap" id="top">
+  <div class="hero-grid">
+    <div>
+      <p class="eyebrow">zoom recordings / accessibility / tested on MIT lectures</p>
+      <h1>captions a deaf student can <em>trust</em>.</h1>
+      <p class="lede">Zoom's captions get almost every word right, except the course terms, and they get those
+        wrong silently. CaptionFix checks them against a second model and the slides, and sends a TA to the
+        few minutes that need a human, so verified captions are ready the same day.</p>
+      <div class="hero-actions">
+        <a class="pill" href="#quiz">read it with the sound off ↓</a>
+        <a class="pill ghost" href="#results">see the numbers</a>
+      </div>
+    </div>
+    <figure class="meeting" aria-label="A recorded lecture caption with a course term marked as doubtful">
+      <div class="meeting-top"><i></i><i></i><i></i><span>6.172 bit hacks, 37:48</span><span class="rec">recorded</span></div>
+      <div class="stage">
+        <div class="slide">
+          <b>Branchless minimum</b>
+          <ul>
+            <li>the compiler can emit a <code>CMOV</code>, a conditional move</li>
+            <li>no branch, so no branch misprediction</li>
+            <li>only pays off when both paths are cheap</li>
+          </ul>
+        </div>
+        <div class="tile"><span>CL</span></div>
+        <p class="caption-bar"><span>so the branch <span class="swap" id="swap">risk prediction</span> only hurts you if there are two different code paths</span></p>
+      </div>
+      <div class="meeting-bottom"><i></i><i></i><i class="cc"></i><i></i></div>
+    </figure>
+  </div>
+  <div class="stats" id="stats"></div>
+</section>
+
+<section class="section" id="quiz">
+  <div class="wrap">
+    <div class="head">
+      <p class="eyebrow">01 / read it like a student who can't hear it</p>
+      <h2>what did the professor <em>say</em>?</h2>
+      <p>Three real Zoom captions from the test lectures, with the sound off. One word in each is wrong.
+        Pick what you think was said, then hear it.</p>
+    </div>
+    <div class="quiz" id="quiz-cards"></div>
+    <p class="quiz-score" id="quiz-score" aria-live="polite"></p>
+  </div>
+</section>
+
+<section class="section" id="try">
+  <div class="wrap">
+    <div class="head">
+      <p class="eyebrow">02 / try it</p>
+      <h2>what a student would see.</h2>
+      <p>An excerpt from a lecture in a course CaptionFix never saw while it was being built. Press play:
+        the slide that was up follows the audio, course terms the two models disagree on are marked with
+        what the second model heard, and the terms list jumps to where each one is said.</p>
+    </div>
+    <div class="player" id="player"></div>
+  </div>
+</section>
+
+<section class="section" id="problem">
+  <div class="wrap">
+    <div class="head">
+      <p class="eyebrow">03 / the problem</p>
+      <h2>right on "the", wrong on the words that matter.</h2>
+    </div>
+    <div class="two">
+      <div class="points">
+        <p><b>Students depend on captions.</b> Deaf and hard of hearing students, students listening in a
+          second language, anyone rewatching at 2x. The 2024 ADA Title II rule asks public universities to make
+          recorded lectures meet WCAG 2.1 AA.</p>
+        <p><b>Auto captions fail where it hurts, and quietly.</b> <span id="problem-rate"></span> A wrong caption
+          looks exactly as sure of itself as a right one.</p>
+        <p><b>Verifying everything by hand does not scale.</b> A lecture is 50 to 80 minutes, a course has 25 of
+          them, and verified captions through an accommodation take days. By then the class has moved on.</p>
+        <p><b>Even paid human captions slip.</b> MIT's own captions, used here as the answer key, have typos
+          like <i>remeber</i> and <i>raytio</i>, and a few course terms where Zoom looks right instead.</p>
+      </div>
+      <div class="misheard" id="misheard"></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="how">
+  <div class="wrap">
+    <div class="head">
+      <p class="eyebrow">04 / how it works</p>
+      <h2>two models, the slides, and a person for six minutes.</h2>
+      <p>Zoom writes the captions. Whisper large-v3-turbo runs locally as the second opinion. Needs a Zoom
+        AI Services API key; <code>--engine whisper</code> runs with no key and nothing leaves the machine.</p>
+    </div>
+    <div class="steps">
+      <div class="step"><h3>Zoom captions</h3><p>The recording goes to Zoom's speech-to-text API (Scribe) in pieces of about four minutes. Responses are cached, so a rerun never pays twice.</p></div>
+      <div class="step"><h3>Second opinion</h3><p>Whisper transcribes the same audio on the laptop. A word is changed only when Whisper heard something else and scoring both versions against the audio clearly favours the change.</p></div>
+      <div class="step"><h3>Mark the doubt</h3><p>Course terms, meaning slide words and rare words, that the two models heard differently are marked for the student with the other reading, instead of being shown as if they were sure.</p></div>
+      <div class="step"><h3>Six minutes for a TA</h3><p>Disagreements about course terms go first on a review list that covers 10% of the lecture. The TA plays each stretch, fixes or accepts it, and exports the captions.</p></div>
+    </div>
+    <p class="rule"><b>What did not work, and is off by default:</b> giving Zoom the slides as vocabulary.
+      Both the whole deck and only the slides on screen made Zoom write course terms that were never said.
+      The numbers are in the results.</p>
+  </div>
+</section>
+
+<section class="section" id="results">
+  <div class="wrap">
+    <div class="head">
+      <p class="eyebrow">05 / results</p>
+      <h2>tested against MIT's human captions.</h2>
+      <p id="results-intro"></p>
+    </div>
+    <h3 class="subhead">Course-term mistakes, before and after the six-minute review</h3>
+    <div class="table-wrap"><table id="outcome"></table></div>
+    <div class="notes" id="outcome-notes"></div>
+
+    <h3 class="subhead">Every caption system on the test lectures</h3>
+    <div class="table-wrap"><table id="systems"></table></div>
+    <div class="notes" id="system-notes"></div>
+
+    <h3 class="subhead">How much of what is left lands on the review list</h3>
+    <div class="table-wrap"><table id="review-table"></table></div>
+    <div class="notes" id="review-notes"></div>
+
+    <h3 class="subhead">Slide vocabulary for Zoom, on the three tuning lectures</h3>
+    <div class="table-wrap"><table id="vocab"></table></div>
+    <div class="notes" id="vocab-notes"></div>
+
+    <h3 class="subhead">By lecture</h3>
+    <div class="table-wrap"><table id="lectures"></table></div>
+  </div>
+</section>
+
+<section class="section" id="review">
+  <div class="wrap">
+    <div class="head">
+      <p class="eyebrow">06 / review</p>
+      <h2>six minutes, not an hour.</h2>
+      <p>The review page lists only the flagged stretches. Press space to hear one, fix the text or press
+        enter if it is right, and export the captions when you are done.</p>
+    </div>
+    <figure class="shot"><img src="./media/review.png" alt="The review page: a list of flagged stretches, each with a play button, the caption text and buttons to accept or save an edit" loading="lazy"></figure>
+  </div>
+</section>
+
+<section class="section" id="run">
+  <div class="wrap">
+    <div class="head">
+      <p class="eyebrow">07 / run it</p>
+      <h2>one command per lecture.</h2>
+      <p>Needs a Mac with Apple silicon, Python 3.12, <a href="https://docs.astral.sh/uv/">uv</a> and ffmpeg.
+        The first run downloads the Whisper model (1.6 GB). The Zoom engine needs <code>ZOOM_API_KEY</code> in
+        <code>.env</code>, from a Zoom AI Services account; the free trial credits cover far more than these
+        tests used.</p>
+    </div>
+    <div class="run">
+      <div>
+        <h3>Caption a recording</h3>
+        <p>Download the recording from Zoom (.mp4 or .m4a) and the slides as a PDF.</p>
+<pre>uv sync
+uv run captionfix run lecture.mp4 \
+    --slides slides.pdf --out out/lecture1
+<span class="c"># no key: --engine whisper</span>
+
+uv run captionfix review out/lecture1
+<span class="c"># open http://localhost:8000</span></pre>
+      </div>
+      <div>
+        <h3>Reproduce the numbers</h3>
+        <p>Downloads 16 OCW lectures, tunes on 3, scores 9 test lectures and 4 from a course never looked at.</p>
+<pre>uv run python scripts/fetch_lectures.py
+uv run python scripts/evaluate.py tune --engine zoom
+uv run python scripts/evaluate.py tune --engine whisper
+uv run python scripts/evaluate.py test
+uv run python scripts/evaluate.py fresh
+uv run pytest -q</pre>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p><b>captionfix.</b> A personal project by Charith Kutikuppala. Code under the MIT license on <a href="https://github.com/itsmeck24/captionfix">GitHub</a>.</p>
+    <p>Lecture audio, slides and human captions are from <a href="https://ocw.mit.edu">MIT OpenCourseWare</a> (6.0001 and 6.0002 Fall 2016, 6.172 Fall 2018, 6.S897 Spring 2019) under CC BY-NC-SA 4.0. Clips here are short excerpts for illustration.</p>
+    <p>Unofficial. Not affiliated with or endorsed by Zoom, MIT or Arizona State University.</p>
+  </div>
+</footer>
+
+<script src="./app.js"></script>
+</body>
+</html>

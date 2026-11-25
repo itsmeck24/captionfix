@@ -1,0 +1,19 @@
+{
+ "outcome": [
+  "<b>Zoom is the right draft.</b> Its captions had the fewest course-term mistakes of every system tried, including Whisper and every version with slide vocabulary.",
+  "<b>Automatic fixes do not help on top of Zoom.</b> They fixed 2 words and broke 7 on the test lectures, and fixed 2 and broke 2 on the fresh course. Whisper is the weaker model, so when the two disagree Whisper is usually the one that is wrong. The review list is what moves the number.",
+  "<b>The review list is the outcome.</b> A TA who checks the flagged 10% of each lecture, about 6 minutes per lecture hour, sees three to four times as many of the course-term mistakes as random spot checks of the same length, on the test lectures and on the fresh course."
+ ],
+ "systems": [
+  "Course-term mistakes count both sides: a course term in MIT's captions that the transcript got wrong, and a course term the transcript wrote that MIT's captions do not have.",
+  "Giving Zoom every slide term as vocabulary found a few more slide terms (2,135 against 2,109) but wrote 59 more that were never said, so mistakes went up from 424 to 534."
+ ],
+ "review": [
+  "First number: share of course-term mistakes inside the flagged stretches. Second: share of all mistakes. Disagreement between Zoom and Whisper is almost the whole signal; putting course terms first only helps at the smallest budget, and the logistic model adds nothing.",
+  "The ranking was fixed before the test lectures were scored."
+ ],
+ "vocab": [
+  "Rule written before these transcripts existed: fewest course-term mistakes, among options with no more total errors than Zoom alone. Only the terms of the slides on screen did less damage than the whole deck, but still more than no vocabulary, so CaptionFix sends Zoom none.",
+  "On the fresh course the whole-deck vocabulary helped a little (89 course-term mistakes against 98), while on the test lectures it hurt (534 against 424). It stays off."
+ ]
+}

@@ -1,0 +1,33 @@
+[project]
+name = "captionfix"
+version = "0.1.0"
+description = "Accurate captions for recorded lectures: slide vocabulary, audio-checked fixes, and a short review list."
+readme = "README.md"
+requires-python = ">=3.12,<3.13"
+license = "MIT"
+dependencies = [
+    "mlx-whisper>=0.4",
+    "numpy",
+    "pymupdf>=1.24",
+    "wordfreq>=3.1",
+    "jellyfish>=1.0",
+    "jiwer>=3.0",
+    "scikit-learn>=1.4",
+    "whisper-normalizer>=0.0.10",
+    "fastapi>=0.110",
+    "uvicorn>=0.29",
+]
+
+[project.scripts]
+captionfix = "captionfix.cli:main"
+
+[dependency-groups]
+dev = ["pytest>=8", "httpx"]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+markers = ["model: needs the Whisper model downloaded"]

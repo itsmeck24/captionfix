@@ -1,0 +1,21 @@
+{
+  "features": [
+    "neg_log_prob",
+    "min_neighbour_neg_log_prob",
+    "disagrees",
+    "second_neg_log_prob",
+    "close_call",
+    "corrected",
+    "short_word"
+  ],
+  "weights": [
+    0.0,
+    0.0,
+    3.3324,
+    4.11,
+    0.7262,
+    0.6204,
+    0.1133
+  ],
+  "bias": -0.6453
+}

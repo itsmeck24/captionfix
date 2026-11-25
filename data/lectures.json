@@ -1,0 +1,149 @@
+{
+  "note": "MIT OpenCourseWare lectures (CC BY-NC-SA). Video and human captions from archive.org, slides from ocw.mit.edu. Dev lectures set every threshold; test lectures are scored once; fresh lectures come from a course never looked at during development.",
+  "lectures": [
+    {
+      "id": "6.0001-02",
+      "split": "dev",
+      "course": "6.0001 Intro to CS and Programming in Python (Fall 2016)",
+      "title": "Branching, Iteration",
+      "archive": "MIT6.0001F16",
+      "stem": "MIT6_0001F16_Lecture_02_300k",
+      "slides": "https://ocw.mit.edu/courses/6-0001-introduction-to-computer-science-and-programming-in-python-fall-2016/ba2947b25b1580e4a84df0ec5dbe5cdd_MIT6_0001F16_Lec2.pdf"
+    },
+    {
+      "id": "6.0001-05",
+      "split": "test",
+      "course": "6.0001 Intro to CS and Programming in Python (Fall 2016)",
+      "title": "Tuples, Lists, Aliasing, Mutability, Cloning",
+      "archive": "MIT6.0001F16",
+      "stem": "MIT6_0001F16_Lecture_05_300k",
+      "slides": "https://ocw.mit.edu/courses/6-0001-introduction-to-computer-science-and-programming-in-python-fall-2016/1776670e271578eeb99fc25975f20586_MIT6_0001F16_Lec5.pdf"
+    },
+    {
+      "id": "6.0001-06",
+      "split": "test",
+      "course": "6.0001 Intro to CS and Programming in Python (Fall 2016)",
+      "title": "Recursion, Dictionaries",
+      "archive": "MIT6.0001F16",
+      "stem": "MIT6_0001F16_Lecture_06_300k",
+      "slides": "https://ocw.mit.edu/courses/6-0001-introduction-to-computer-science-and-programming-in-python-fall-2016/876348c652c5353daccc96e1b7d577bb_MIT6_0001F16_Lec6.pdf"
+    },
+    {
+      "id": "6.0001-08",
+      "split": "test",
+      "course": "6.0001 Intro to CS and Programming in Python (Fall 2016)",
+      "title": "Object Oriented Programming",
+      "archive": "MIT6.0001F16",
+      "stem": "MIT6_0001F16_Lecture_08_300k",
+      "slides": "https://ocw.mit.edu/courses/6-0001-introduction-to-computer-science-and-programming-in-python-fall-2016/7a6f85d03f132dcd9d7592bc4643be1c_MIT6_0001F16_Lec8.pdf"
+    },
+    {
+      "id": "6.172-02",
+      "split": "dev",
+      "course": "6.172 Performance Engineering of Software Systems (Fall 2018)",
+      "title": "Bentley Rules for Optimizing Work",
+      "archive": "MIT6.172F18",
+      "stem": "MIT6_172F18_lecture_02_300k",
+      "slides": "https://ocw.mit.edu/courses/6-172-performance-engineering-of-software-systems-fall-2018/1a57adbec9520270d4485b42a2e1a316_MIT6_172F18_lec2.pdf"
+    },
+    {
+      "id": "6.172-03",
+      "split": "test",
+      "course": "6.172 Performance Engineering of Software Systems (Fall 2018)",
+      "title": "Bit Hacks",
+      "archive": "MIT6.172F18",
+      "stem": "MIT6_172F18_lecture_03_300k",
+      "slides": "https://ocw.mit.edu/courses/6-172-performance-engineering-of-software-systems-fall-2018/cc6983c9ebd77c28e8ae85bc0e575360_MIT6_172F18_lec3.pdf"
+    },
+    {
+      "id": "6.172-04",
+      "split": "test",
+      "course": "6.172 Performance Engineering of Software Systems (Fall 2018)",
+      "title": "Assembly Language and Computer Architecture",
+      "archive": "MIT6.172F18",
+      "stem": "MIT6_172F18_lecture_04_300k",
+      "slides": "https://ocw.mit.edu/courses/6-172-performance-engineering-of-software-systems-fall-2018/8955b91dbd47c241fb2904c700fdb697_MIT6_172F18_lec4.pdf"
+    },
+    {
+      "id": "6.172-09",
+      "split": "test",
+      "course": "6.172 Performance Engineering of Software Systems (Fall 2018)",
+      "title": "What Compilers Can and Cannot Do",
+      "archive": "MIT6.172F18",
+      "stem": "MIT6_172F18_lecture_09_300k",
+      "slides": "https://ocw.mit.edu/courses/6-172-performance-engineering-of-software-systems-fall-2018/df628b3fffb046d18f9442f01a812ccf_MIT6_172F18_lec9.pdf"
+    },
+    {
+      "id": "6.S897-01",
+      "split": "dev",
+      "course": "6.S897 Machine Learning for Healthcare (Spring 2019)",
+      "title": "What Makes Healthcare Unique?",
+      "archive": "MIT6.S897S19",
+      "stem": "MIT6_S897S19_lec01_300k",
+      "slides": "https://ocw.mit.edu/courses/6-s897-machine-learning-for-healthcare-spring-2019/2020812c6b3be9e2c27873595d1a9aed_MIT6_S897S19_lec1.pdf"
+    },
+    {
+      "id": "6.S897-04",
+      "split": "test",
+      "course": "6.S897 Machine Learning for Healthcare (Spring 2019)",
+      "title": "Risk Stratification, Part 1",
+      "archive": "MIT6.S897S19",
+      "stem": "MIT6_S897S19_lec04_300k",
+      "slides": "https://ocw.mit.edu/courses/6-s897-machine-learning-for-healthcare-spring-2019/d513d4a368a545587bc2645007516c61_MIT6_S897S19_lec4.pdf"
+    },
+    {
+      "id": "6.S897-05",
+      "split": "test",
+      "course": "6.S897 Machine Learning for Healthcare (Spring 2019)",
+      "title": "Risk Stratification, Part 2",
+      "archive": "MIT6.S897S19",
+      "stem": "MIT6_S897S19_lec05_300k",
+      "slides": "https://ocw.mit.edu/courses/6-s897-machine-learning-for-healthcare-spring-2019/476c3cdeaf64631d2fb0332832ff6250_MIT6_S897S19_lec5.pdf"
+    },
+    {
+      "id": "6.S897-06",
+      "split": "test",
+      "course": "6.S897 Machine Learning for Healthcare (Spring 2019)",
+      "title": "Physiological Time-Series",
+      "archive": "MIT6.S897S19",
+      "stem": "MIT6_S897S19_lec06_300k",
+      "slides": "https://ocw.mit.edu/courses/6-s897-machine-learning-for-healthcare-spring-2019/resources/mit6_s897s19_lec6/"
+    },
+    {
+      "id": "6.0002-03",
+      "split": "fresh",
+      "course": "6.0002 Intro to Computational Thinking and Data Science (Fall 2016)",
+      "title": "Graph-theoretic Models",
+      "archive": "MIT6.0002F16",
+      "stem": "MIT6_0002F16_lec03_300k",
+      "slides": "https://ocw.mit.edu/courses/6-0002-introduction-to-computational-thinking-and-data-science-fall-2016/resources/mit6_0002f16_lec3/"
+    },
+    {
+      "id": "6.0002-05",
+      "split": "fresh",
+      "course": "6.0002 Intro to Computational Thinking and Data Science (Fall 2016)",
+      "title": "Random Walks",
+      "archive": "MIT6.0002F16",
+      "stem": "MIT6_0002F16_lec05_300k",
+      "slides": "https://ocw.mit.edu/courses/6-0002-introduction-to-computational-thinking-and-data-science-fall-2016/resources/mit6_0002f16_lec5/"
+    },
+    {
+      "id": "6.0002-11",
+      "split": "fresh",
+      "course": "6.0002 Intro to Computational Thinking and Data Science (Fall 2016)",
+      "title": "Introduction to Machine Learning",
+      "archive": "MIT6.0002F16",
+      "stem": "MIT6_0002F16_lec11_300k",
+      "slides": "https://ocw.mit.edu/courses/6-0002-introduction-to-computational-thinking-and-data-science-fall-2016/resources/mit6_0002f16_lec11/"
+    },
+    {
+      "id": "6.0002-12",
+      "split": "fresh",
+      "course": "6.0002 Intro to Computational Thinking and Data Science (Fall 2016)",
+      "title": "Clustering",
+      "archive": "MIT6.0002F16",
+      "stem": "MIT6_0002F16_lec12_300k",
+      "slides": "https://ocw.mit.edu/courses/6-0002-introduction-to-computational-thinking-and-data-science-fall-2016/resources/mit6_0002f16_lec12/"
+    }
+  ]
+}

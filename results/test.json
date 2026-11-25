@@ -1,0 +1,3936 @@
+{
+ "split": "test",
+ "lectures": 9,
+ "minutes": 600.7,
+ "settings": {
+  "zoom": {
+   "margin": 2.0,
+   "min_similarity": 0.8,
+   "sources": [
+    "sound",
+    "second",
+    "loop"
+   ],
+   "score_with_prompt": true,
+   "budget": 0.1,
+   "vocabulary": "none",
+   "slides": 3
+  },
+  "whisper": {
+   "margin": 0.5,
+   "min_similarity": 0.7,
+   "sources": [
+    "sound",
+    "second",
+    "loop"
+   ],
+   "score_with_prompt": true,
+   "budget": 0.1,
+   "vocabulary": "synced",
+   "slides": 3
+  }
+ },
+ "systems": {
+  "zoom": {
+   "ref_words": 97397,
+   "substitutions": 1382,
+   "deletions": 1144,
+   "insertions": 2031,
+   "rare_total": 1761,
+   "rare_correct": 1600,
+   "term_total": 2191,
+   "term_correct": 2109,
+   "term_false": 93,
+   "course_total": 3024,
+   "course_correct": 2827,
+   "course_false": 227,
+   "errors": 4557,
+   "course_mistakes": 424,
+   "course_mistake_rate": 0.1402,
+   "wer": 0.0468,
+   "rare_recall": 0.9086,
+   "term_recall": 0.9626
+  },
+  "zoom_vocab": {
+   "ref_words": 97397,
+   "substitutions": 1456,
+   "deletions": 1181,
+   "insertions": 2005,
+   "rare_total": 1761,
+   "rare_correct": 1593,
+   "term_total": 2191,
+   "term_correct": 2135,
+   "term_false": 152,
+   "course_total": 3024,
+   "course_correct": 2821,
+   "course_false": 331,
+   "errors": 4642,
+   "course_mistakes": 534,
+   "course_mistake_rate": 0.1766,
+   "wer": 0.0477,
+   "rare_recall": 0.9046,
+   "term_recall": 0.9744
+  },
+  "whisper": {
+   "ref_words": 97397,
+   "substitutions": 1553,
+   "deletions": 1105,
+   "insertions": 2773,
+   "rare_total": 1761,
+   "rare_correct": 1526,
+   "term_total": 2191,
+   "term_correct": 2063,
+   "term_false": 109,
+   "course_total": 3024,
+   "course_correct": 2748,
+   "course_false": 306,
+   "errors": 5431,
+   "course_mistakes": 582,
+   "course_mistake_rate": 0.1925,
+   "wer": 0.0558,
+   "rare_recall": 0.8666,
+   "term_recall": 0.9416
+  },
+  "whisper_primed": {
+   "ref_words": 97397,
+   "substitutions": 1551,
+   "deletions": 897,
+   "insertions": 2808,
+   "rare_total": 1761,
+   "rare_correct": 1557,
+   "term_total": 2191,
+   "term_correct": 2096,
+   "term_false": 154,
+   "course_total": 3024,
+   "course_correct": 2784,
+   "course_false": 356,
+   "errors": 5256,
+   "course_mistakes": 596,
+   "course_mistake_rate": 0.1971,
+   "wer": 0.054,
+   "rare_recall": 0.8842,
+   "term_recall": 0.9566
+  },
+  "captionfix_zoom": {
+   "ref_words": 97397,
+   "substitutions": 1388,
+   "deletions": 1146,
+   "insertions": 2030,
+   "rare_total": 1761,
+   "rare_correct": 1596,
+   "term_total": 2191,
+   "term_correct": 2109,
+   "term_false": 95,
+   "course_total": 3024,
+   "course_correct": 2823,
+   "course_false": 233,
+   "errors": 4564,
+   "course_mistakes": 434,
+   "course_mistake_rate": 0.1435,
+   "wer": 0.0469,
+   "rare_recall": 0.9063,
+   "term_recall": 0.9626
+  },
+  "captionfix_whisper": {
+   "ref_words": 97397,
+   "substitutions": 1538,
+   "deletions": 1073,
+   "insertions": 2749,
+   "rare_total": 1761,
+   "rare_correct": 1546,
+   "term_total": 2191,
+   "term_correct": 2075,
+   "term_false": 123,
+   "course_total": 3024,
+   "course_correct": 2769,
+   "course_false": 311,
+   "errors": 5360,
+   "course_mistakes": 566,
+   "course_mistake_rate": 0.1872,
+   "wer": 0.055,
+   "rare_recall": 0.8779,
+   "term_recall": 0.9471
+  }
+ },
+ "corrections_zoom": {
+  "kept": 19,
+  "fixed": 2,
+  "broke": 7,
+  "still_wrong": 7,
+  "by_source": {
+   "second": {
+    "kept": 19,
+    "fixed": 2,
+    "broke": 7,
+    "still_wrong": 7
+   }
+  }
+ },
+ "review_zoom": {
+  "errors_after_correction": 3781,
+  "course_errors_after_correction": 422,
+  "model@0.05": {
+   "caught": 832,
+   "share_caught": 0.22,
+   "course_caught": 87,
+   "course_share_caught": 0.2062,
+   "review_minutes": 29.9
+  },
+  "model@0.1": {
+   "caught": 1542,
+   "share_caught": 0.4078,
+   "course_caught": 165,
+   "course_share_caught": 0.391,
+   "review_minutes": 60.0
+  },
+  "model@0.15": {
+   "caught": 2064,
+   "share_caught": 0.5459,
+   "course_caught": 211,
+   "course_share_caught": 0.5,
+   "review_minutes": 90.0
+  },
+  "model@0.2": {
+   "caught": 2376,
+   "share_caught": 0.6284,
+   "course_caught": 252,
+   "course_share_caught": 0.5972,
+   "review_minutes": 120.0
+  },
+  "disagreement_only@0.05": {
+   "caught": 887,
+   "share_caught": 0.2346,
+   "course_caught": 89,
+   "course_share_caught": 0.2109,
+   "review_minutes": 29.9
+  },
+  "disagreement_only@0.1": {
+   "caught": 1585,
+   "share_caught": 0.4192,
+   "course_caught": 160,
+   "course_share_caught": 0.3791,
+   "review_minutes": 60.0
+  },
+  "disagreement_only@0.15": {
+   "caught": 2067,
+   "share_caught": 0.5467,
+   "course_caught": 207,
+   "course_share_caught": 0.4905,
+   "review_minutes": 90.0
+  },
+  "disagreement_only@0.2": {
+   "caught": 2371,
+   "share_caught": 0.6271,
+   "course_caught": 245,
+   "course_share_caught": 0.5806,
+   "review_minutes": 120.0
+  },
+  "course_first@0.05": {
+   "caught": 868,
+   "share_caught": 0.2296,
+   "course_caught": 110,
+   "course_share_caught": 0.2607,
+   "review_minutes": 29.9
+  },
+  "course_first@0.1": {
+   "caught": 1583,
+   "share_caught": 0.4187,
+   "course_caught": 158,
+   "course_share_caught": 0.3744,
+   "review_minutes": 60.0
+  },
+  "course_first@0.15": {
+   "caught": 2067,
+   "share_caught": 0.5467,
+   "course_caught": 207,
+   "course_share_caught": 0.4905,
+   "review_minutes": 90.0
+  },
+  "course_first@0.2": {
+   "caught": 2371,
+   "share_caught": 0.6271,
+   "course_caught": 245,
+   "course_share_caught": 0.5806,
+   "review_minutes": 120.1
+  },
+  "random@0.05": {
+   "caught": 250,
+   "share_caught": 0.0661,
+   "course_caught": 29,
+   "course_share_caught": 0.0687,
+   "review_minutes": 29.9
+  },
+  "random@0.1": {
+   "caught": 472,
+   "share_caught": 0.1248,
+   "course_caught": 51,
+   "course_share_caught": 0.1209,
+   "review_minutes": 60.0
+  },
+  "random@0.15": {
+   "caught": 676,
+   "share_caught": 0.1788,
+   "course_caught": 82,
+   "course_share_caught": 0.1943,
+   "review_minutes": 90.1
+  },
+  "random@0.2": {
+   "caught": 921,
+   "share_caught": 0.2436,
+   "course_caught": 105,
+   "course_share_caught": 0.2488,
+   "review_minutes": 120.0
+  }
+ },
+ "corrections_whisper": {
+  "kept": 67,
+  "fixed": 25,
+  "broke": 17,
+  "still_wrong": 21,
+  "by_source": {
+   "second": {
+    "kept": 53,
+    "fixed": 23,
+    "broke": 17,
+    "still_wrong": 9
+   },
+   "sound": {
+    "kept": 11,
+    "fixed": 1,
+    "broke": 0,
+    "still_wrong": 10
+   },
+   "loop": {
+    "kept": 3,
+    "fixed": 1,
+    "broke": 0,
+    "still_wrong": 2
+   }
+  }
+ },
+ "review_whisper": {
+  "errors_after_correction": 4559,
+  "course_errors_after_correction": 648,
+  "model@0.05": {
+   "caught": 1226,
+   "share_caught": 0.2689,
+   "course_caught": 203,
+   "course_share_caught": 0.3133,
+   "review_minutes": 29.9
+  },
+  "model@0.1": {
+   "caught": 2081,
+   "share_caught": 0.4565,
+   "course_caught": 327,
+   "course_share_caught": 0.5046,
+   "review_minutes": 60.0
+  },
+  "model@0.15": {
+   "caught": 2591,
+   "share_caught": 0.5683,
+   "course_caught": 384,
+   "course_share_caught": 0.5926,
+   "review_minutes": 90.0
+  },
+  "model@0.2": {
+   "caught": 2951,
+   "share_caught": 0.6473,
+   "course_caught": 427,
+   "course_share_caught": 0.659,
+   "review_minutes": 120.0
+  },
+  "disagreement_only@0.05": {
+   "caught": 1327,
+   "share_caught": 0.2911,
+   "course_caught": 216,
+   "course_share_caught": 0.3333,
+   "review_minutes": 29.8
+  },
+  "disagreement_only@0.1": {
+   "caught": 2066,
+   "share_caught": 0.4532,
+   "course_caught": 339,
+   "course_share_caught": 0.5231,
+   "review_minutes": 59.9
+  },
+  "disagreement_only@0.15": {
+   "caught": 2603,
+   "share_caught": 0.571,
+   "course_caught": 409,
+   "course_share_caught": 0.6312,
+   "review_minutes": 90.0
+  },
+  "disagreement_only@0.2": {
+   "caught": 2964,
+   "share_caught": 0.6501,
+   "course_caught": 443,
+   "course_share_caught": 0.6836,
+   "review_minutes": 120.0
+  },
+  "course_first@0.05": {
+   "caught": 1316,
+   "share_caught": 0.2887,
+   "course_caught": 216,
+   "course_share_caught": 0.3333,
+   "review_minutes": 30.0
+  },
+  "course_first@0.1": {
+   "caught": 2066,
+   "share_caught": 0.4532,
+   "course_caught": 339,
+   "course_share_caught": 0.5231,
+   "review_minutes": 59.9
+  },
+  "course_first@0.15": {
+   "caught": 2604,
+   "share_caught": 0.5712,
+   "course_caught": 409,
+   "course_share_caught": 0.6312,
+   "review_minutes": 90.0
+  },
+  "course_first@0.2": {
+   "caught": 2964,
+   "share_caught": 0.6501,
+   "course_caught": 443,
+   "course_share_caught": 0.6836,
+   "review_minutes": 120.0
+  },
+  "random@0.05": {
+   "caught": 299,
+   "share_caught": 0.0656,
+   "course_caught": 32,
+   "course_share_caught": 0.0494,
+   "review_minutes": 29.9
+  },
+  "random@0.1": {
+   "caught": 580,
+   "share_caught": 0.1272,
+   "course_caught": 76,
+   "course_share_caught": 0.1173,
+   "review_minutes": 60.0
+  },
+  "random@0.15": {
+   "caught": 860,
+   "share_caught": 0.1886,
+   "course_caught": 116,
+   "course_share_caught": 0.179,
+   "review_minutes": 90.0
+  },
+  "random@0.2": {
+   "caught": 1126,
+   "share_caught": 0.247,
+   "course_caught": 160,
+   "course_share_caught": 0.2469,
+   "review_minutes": 120.0
+  }
+ },
+ "per_lecture": [
+  {
+   "id": "6.0001-05",
+   "course": "6.0001 Intro to CS and Programming in Python (Fall 2016)",
+   "title": "Tuples, Lists, Aliasing, Mutability, Cloning",
+   "minutes": 41.5,
+   "slide_terms": 16,
+   "zoom": {
+    "wer": 0.0268,
+    "ref_words": 6642,
+    "substitutions": 46,
+    "deletions": 72,
+    "insertions": 60,
+    "rare_total": 167,
+    "rare_correct": 160,
+    "term_total": 104,
+    "term_correct": 101,
+    "term_false": 1,
+    "course_total": 167,
+    "course_correct": 160,
+    "course_false": 6
+   },
+   "zoom_vocab": {
+    "wer": 0.0271,
+    "ref_words": 6642,
+    "substitutions": 49,
+    "deletions": 72,
+    "insertions": 59,
+    "rare_total": 167,
+    "rare_correct": 158,
+    "term_total": 104,
+    "term_correct": 100,
+    "term_false": 4,
+    "course_total": 167,
+    "course_correct": 158,
+    "course_false": 8
+   },
+   "whisper": {
+    "wer": 0.0391,
+    "ref_words": 6642,
+    "substitutions": 49,
+    "deletions": 68,
+    "insertions": 143,
+    "rare_total": 167,
+    "rare_correct": 161,
+    "term_total": 104,
+    "term_correct": 101,
+    "term_false": 1,
+    "course_total": 167,
+    "course_correct": 161,
+    "course_false": 6
+   },
+   "whisper_primed": {
+    "wer": 0.0396,
+    "ref_words": 6642,
+    "substitutions": 59,
+    "deletions": 61,
+    "insertions": 143,
+    "rare_total": 167,
+    "rare_correct": 160,
+    "term_total": 104,
+    "term_correct": 100,
+    "term_false": 2,
+    "course_total": 167,
+    "course_correct": 160,
+    "course_false": 10
+   },
+   "captionfix_zoom": {
+    "wer": 0.0268,
+    "ref_words": 6642,
+    "substitutions": 46,
+    "deletions": 72,
+    "insertions": 60,
+    "rare_total": 167,
+    "rare_correct": 160,
+    "term_total": 104,
+    "term_correct": 101,
+    "term_false": 1,
+    "course_total": 167,
+    "course_correct": 160,
+    "course_false": 6
+   },
+   "captionfix_whisper": {
+    "wer": 0.0394,
+    "ref_words": 6642,
+    "substitutions": 50,
+    "deletions": 69,
+    "insertions": 143,
+    "rare_total": 167,
+    "rare_correct": 160,
+    "term_total": 104,
+    "term_correct": 100,
+    "term_false": 2,
+    "course_total": 167,
+    "course_correct": 160,
+    "course_false": 7
+   },
+   "corrections_zoom": {
+    "kept": 0,
+    "fixed": 0,
+    "broke": 0,
+    "still_wrong": 0,
+    "by_source": {},
+    "examples": []
+   },
+   "review_zoom": {
+    "errors": 139,
+    "course_errors": 10,
+    "words": 6347,
+    "model@0.05": {
+     "caught": 34,
+     "course_caught": 3,
+     "review_minutes": 2.05
+    },
+    "model@0.1": {
+     "caught": 54,
+     "course_caught": 6,
+     "review_minutes": 4.15
+    },
+    "model@0.15": {
+     "caught": 70,
+     "course_caught": 7,
+     "review_minutes": 6.2
+    },
+    "model@0.2": {
+     "caught": 83,
+     "course_caught": 7,
+     "review_minutes": 8.29
+    },
+    "disagreement_only@0.05": {
+     "caught": 41,
+     "course_caught": 3,
+     "review_minutes": 2.06
+    },
+    "disagreement_only@0.1": {
+     "caught": 53,
+     "course_caught": 5,
+     "review_minutes": 4.14
+    },
+    "disagreement_only@0.15": {
+     "caught": 70,
+     "course_caught": 7,
+     "review_minutes": 6.2
+    },
+    "disagreement_only@0.2": {
+     "caught": 82,
+     "course_caught": 7,
+     "review_minutes": 8.29
+    },
+    "course_first@0.05": {
+     "caught": 41,
+     "course_caught": 3,
+     "review_minutes": 2.06
+    },
+    "course_first@0.1": {
+     "caught": 53,
+     "course_caught": 5,
+     "review_minutes": 4.13
+    },
+    "course_first@0.15": {
+     "caught": 70,
+     "course_caught": 7,
+     "review_minutes": 6.22
+    },
+    "course_first@0.2": {
+     "caught": 82,
+     "course_caught": 7,
+     "review_minutes": 8.28
+    },
+    "random@0.05": {
+     "caught": 4,
+     "course_caught": 0,
+     "review_minutes": 2.07
+    },
+    "random@0.1": {
+     "caught": 14,
+     "course_caught": 1,
+     "review_minutes": 4.13
+    },
+    "random@0.15": {
+     "caught": 23,
+     "course_caught": 1,
+     "review_minutes": 6.22
+    },
+    "random@0.2": {
+     "caught": 30,
+     "course_caught": 2,
+     "review_minutes": 8.29
+    }
+   },
+   "corrections_whisper": {
+    "kept": 1,
+    "fixed": 0,
+    "broke": 1,
+    "still_wrong": 0,
+    "by_source": {
+     "second": {
+      "kept": 1,
+      "fixed": 0,
+      "broke": 1,
+      "still_wrong": 0
+     }
+    },
+    "examples": [
+     {
+      "t": 556.5,
+      "end": 557.1,
+      "from": "a tuple",
+      "to": "aTuple",
+      "source": "second",
+      "delta": 2.966,
+      "outcome": "broke"
+     }
+    ]
+   },
+   "review_whisper": {
+    "errors": 215,
+    "course_errors": 10,
+    "words": 6412,
+    "model@0.05": {
+     "caught": 63,
+     "course_caught": 3,
+     "review_minutes": 2.06
+    },
+    "model@0.1": {
+     "caught": 110,
+     "course_caught": 3,
+     "review_minutes": 4.12
+    },
+    "model@0.15": {
+     "caught": 130,
+     "course_caught": 3,
+     "review_minutes": 6.2
+    },
+    "model@0.2": {
+     "caught": 146,
+     "course_caught": 4,
+     "review_minutes": 8.29
+    },
+    "disagreement_only@0.05": {
+     "caught": 77,
+     "course_caught": 2,
+     "review_minutes": 2.07
+    },
+    "disagreement_only@0.1": {
+     "caught": 110,
+     "course_caught": 4,
+     "review_minutes": 4.12
+    },
+    "disagreement_only@0.15": {
+     "caught": 130,
+     "course_caught": 4,
+     "review_minutes": 6.21
+    },
+    "disagreement_only@0.2": {
+     "caught": 146,
+     "course_caught": 6,
+     "review_minutes": 8.27
+    },
+    "course_first@0.05": {
+     "caught": 77,
+     "course_caught": 2,
+     "review_minutes": 2.07
+    },
+    "course_first@0.1": {
+     "caught": 110,
+     "course_caught": 4,
+     "review_minutes": 4.12
+    },
+    "course_first@0.15": {
+     "caught": 130,
+     "course_caught": 4,
+     "review_minutes": 6.21
+    },
+    "course_first@0.2": {
+     "caught": 146,
+     "course_caught": 6,
+     "review_minutes": 8.27
+    },
+    "random@0.05": {
+     "caught": 14,
+     "course_caught": 0,
+     "review_minutes": 2.06
+    },
+    "random@0.1": {
+     "caught": 29,
+     "course_caught": 0,
+     "review_minutes": 4.13
+    },
+    "random@0.15": {
+     "caught": 36,
+     "course_caught": 2,
+     "review_minutes": 6.2
+    },
+    "random@0.2": {
+     "caught": 45,
+     "course_caught": 2,
+     "review_minutes": 8.29
+    }
+   },
+   "timing": {
+    "check_zoom": 43.1,
+    "check_whisper": 0.0
+   }
+  },
+  {
+   "id": "6.0001-06",
+   "course": "6.0001 Intro to CS and Programming in Python (Fall 2016)",
+   "title": "Recursion, Dictionaries",
+   "minutes": 48.4,
+   "slide_terms": 83,
+   "zoom": {
+    "wer": 0.0314,
+    "ref_words": 9336,
+    "substitutions": 145,
+    "deletions": 48,
+    "insertions": 100,
+    "rare_total": 175,
+    "rare_correct": 168,
+    "term_total": 294,
+    "term_correct": 293,
+    "term_false": 28,
+    "course_total": 379,
+    "course_correct": 371,
+    "course_false": 36
+   },
+   "zoom_vocab": {
+    "wer": 0.0367,
+    "ref_words": 9336,
+    "substitutions": 184,
+    "deletions": 57,
+    "insertions": 102,
+    "rare_total": 175,
+    "rare_correct": 164,
+    "term_total": 294,
+    "term_correct": 290,
+    "term_false": 41,
+    "course_total": 379,
+    "course_correct": 364,
+    "course_false": 71
+   },
+   "whisper": {
+    "wer": 0.0394,
+    "ref_words": 9336,
+    "substitutions": 164,
+    "deletions": 45,
+    "insertions": 159,
+    "rare_total": 175,
+    "rare_correct": 166,
+    "term_total": 294,
+    "term_correct": 291,
+    "term_false": 29,
+    "course_total": 379,
+    "course_correct": 368,
+    "course_false": 39
+   },
+   "whisper_primed": {
+    "wer": 0.0403,
+    "ref_words": 9336,
+    "substitutions": 163,
+    "deletions": 57,
+    "insertions": 156,
+    "rare_total": 175,
+    "rare_correct": 163,
+    "term_total": 294,
+    "term_correct": 289,
+    "term_false": 30,
+    "course_total": 379,
+    "course_correct": 365,
+    "course_false": 43
+   },
+   "captionfix_zoom": {
+    "wer": 0.0315,
+    "ref_words": 9336,
+    "substitutions": 146,
+    "deletions": 48,
+    "insertions": 100,
+    "rare_total": 175,
+    "rare_correct": 167,
+    "term_total": 294,
+    "term_correct": 293,
+    "term_false": 28,
+    "course_total": 379,
+    "course_correct": 370,
+    "course_false": 37
+   },
+   "captionfix_whisper": {
+    "wer": 0.0398,
+    "ref_words": 9336,
+    "substitutions": 166,
+    "deletions": 47,
+    "insertions": 159,
+    "rare_total": 175,
+    "rare_correct": 164,
+    "term_total": 294,
+    "term_correct": 290,
+    "term_false": 29,
+    "course_total": 379,
+    "course_correct": 366,
+    "course_false": 41
+   },
+   "corrections_zoom": {
+    "kept": 1,
+    "fixed": 0,
+    "broke": 1,
+    "still_wrong": 0,
+    "by_source": {
+     "second": {
+      "kept": 1,
+      "fixed": 0,
+      "broke": 1,
+      "still_wrong": 0
+     }
+    },
+    "examples": [
+     {
+      "t": 195.3,
+      "end": 195.68,
+      "from": "Droste",
+      "to": "Drost",
+      "source": "second",
+      "delta": 4.236,
+      "outcome": "broke"
+     }
+    ]
+   },
+   "review_zoom": {
+    "errors": 273,
+    "course_errors": 40,
+    "words": 8962,
+    "model@0.05": {
+     "caught": 45,
+     "course_caught": 5,
+     "review_minutes": 2.42
+    },
+    "model@0.1": {
+     "caught": 91,
+     "course_caught": 8,
+     "review_minutes": 4.83
+    },
+    "model@0.15": {
+     "caught": 111,
+     "course_caught": 10,
+     "review_minutes": 7.24
+    },
+    "model@0.2": {
+     "caught": 138,
+     "course_caught": 15,
+     "review_minutes": 9.66
+    },
+    "disagreement_only@0.05": {
+     "caught": 48,
+     "course_caught": 4,
+     "review_minutes": 2.4
+    },
+    "disagreement_only@0.1": {
+     "caught": 91,
+     "course_caught": 8,
+     "review_minutes": 4.83
+    },
+    "disagreement_only@0.15": {
+     "caught": 114,
+     "course_caught": 10,
+     "review_minutes": 7.25
+    },
+    "disagreement_only@0.2": {
+     "caught": 137,
+     "course_caught": 13,
+     "review_minutes": 9.66
+    },
+    "course_first@0.05": {
+     "caught": 48,
+     "course_caught": 4,
+     "review_minutes": 2.4
+    },
+    "course_first@0.1": {
+     "caught": 91,
+     "course_caught": 8,
+     "review_minutes": 4.83
+    },
+    "course_first@0.15": {
+     "caught": 114,
+     "course_caught": 10,
+     "review_minutes": 7.25
+    },
+    "course_first@0.2": {
+     "caught": 137,
+     "course_caught": 13,
+     "review_minutes": 9.66
+    },
+    "random@0.05": {
+     "caught": 17,
+     "course_caught": 3,
+     "review_minutes": 2.4
+    },
+    "random@0.1": {
+     "caught": 33,
+     "course_caught": 3,
+     "review_minutes": 4.82
+    },
+    "random@0.15": {
+     "caught": 51,
+     "course_caught": 6,
+     "review_minutes": 7.25
+    },
+    "random@0.2": {
+     "caught": 68,
+     "course_caught": 6,
+     "review_minutes": 9.67
+    }
+   },
+   "corrections_whisper": {
+    "kept": 2,
+    "fixed": 0,
+    "broke": 2,
+    "still_wrong": 0,
+    "by_source": {
+     "second": {
+      "kept": 2,
+      "fixed": 0,
+      "broke": 2,
+      "still_wrong": 0
+     }
+    },
+    "examples": [
+     {
+      "t": 431.54,
+      "end": 431.98,
+      "from": "mult iter.",
+      "to": "multiter.",
+      "source": "second",
+      "delta": 2.808,
+      "outcome": "broke"
+     },
+     {
+      "t": 2314.88,
+      "end": 2315.66,
+      "from": "Open close",
+      "to": "OpenClose",
+      "source": "second",
+      "delta": 3.328,
+      "outcome": "broke"
+     }
+    ]
+   },
+   "review_whisper": {
+    "errors": 338,
+    "course_errors": 45,
+    "words": 9016,
+    "model@0.05": {
+     "caught": 95,
+     "course_caught": 3,
+     "review_minutes": 2.41
+    },
+    "model@0.1": {
+     "caught": 128,
+     "course_caught": 8,
+     "review_minutes": 4.83
+    },
+    "model@0.15": {
+     "caught": 167,
+     "course_caught": 11,
+     "review_minutes": 7.23
+    },
+    "model@0.2": {
+     "caught": 192,
+     "course_caught": 16,
+     "review_minutes": 9.67
+    },
+    "disagreement_only@0.05": {
+     "caught": 92,
+     "course_caught": 5,
+     "review_minutes": 2.41
+    },
+    "disagreement_only@0.1": {
+     "caught": 130,
+     "course_caught": 9,
+     "review_minutes": 4.83
+    },
+    "disagreement_only@0.15": {
+     "caught": 167,
+     "course_caught": 12,
+     "review_minutes": 7.24
+    },
+    "disagreement_only@0.2": {
+     "caught": 191,
+     "course_caught": 16,
+     "review_minutes": 9.66
+    },
+    "course_first@0.05": {
+     "caught": 92,
+     "course_caught": 5,
+     "review_minutes": 2.41
+    },
+    "course_first@0.1": {
+     "caught": 130,
+     "course_caught": 9,
+     "review_minutes": 4.83
+    },
+    "course_first@0.15": {
+     "caught": 167,
+     "course_caught": 12,
+     "review_minutes": 7.24
+    },
+    "course_first@0.2": {
+     "caught": 191,
+     "course_caught": 16,
+     "review_minutes": 9.66
+    },
+    "random@0.05": {
+     "caught": 52,
+     "course_caught": 5,
+     "review_minutes": 2.4
+    },
+    "random@0.1": {
+     "caught": 64,
+     "course_caught": 6,
+     "review_minutes": 4.82
+    },
+    "random@0.15": {
+     "caught": 85,
+     "course_caught": 9,
+     "review_minutes": 7.25
+    },
+    "random@0.2": {
+     "caught": 98,
+     "course_caught": 10,
+     "review_minutes": 9.66
+    }
+   },
+   "timing": {
+    "check_zoom": 104.2,
+    "check_whisper": 0.0
+   }
+  },
+  {
+   "id": "6.0001-08",
+   "course": "6.0001 Intro to CS and Programming in Python (Fall 2016)",
+   "title": "Object Oriented Programming",
+   "minutes": 41.7,
+   "slide_terms": 15,
+   "zoom": {
+    "wer": 0.0406,
+    "ref_words": 6479,
+    "substitutions": 42,
+    "deletions": 95,
+    "insertions": 126,
+    "rare_total": 84,
+    "rare_correct": 62,
+    "term_total": 35,
+    "term_correct": 35,
+    "term_false": 2,
+    "course_total": 84,
+    "course_correct": 62,
+    "course_false": 3
+   },
+   "zoom_vocab": {
+    "wer": 0.0414,
+    "ref_words": 6479,
+    "substitutions": 44,
+    "deletions": 94,
+    "insertions": 130,
+    "rare_total": 84,
+    "rare_correct": 62,
+    "term_total": 35,
+    "term_correct": 35,
+    "term_false": 3,
+    "course_total": 84,
+    "course_correct": 62,
+    "course_false": 4
+   },
+   "whisper": {
+    "wer": 0.052,
+    "ref_words": 6479,
+    "substitutions": 62,
+    "deletions": 28,
+    "insertions": 247,
+    "rare_total": 84,
+    "rare_correct": 81,
+    "term_total": 35,
+    "term_correct": 35,
+    "term_false": 2,
+    "course_total": 84,
+    "course_correct": 81,
+    "course_false": 5
+   },
+   "whisper_primed": {
+    "wer": 0.0526,
+    "ref_words": 6479,
+    "substitutions": 53,
+    "deletions": 45,
+    "insertions": 243,
+    "rare_total": 84,
+    "rare_correct": 82,
+    "term_total": 35,
+    "term_correct": 35,
+    "term_false": 3,
+    "course_total": 84,
+    "course_correct": 82,
+    "course_false": 8
+   },
+   "captionfix_zoom": {
+    "wer": 0.0406,
+    "ref_words": 6479,
+    "substitutions": 42,
+    "deletions": 95,
+    "insertions": 126,
+    "rare_total": 84,
+    "rare_correct": 62,
+    "term_total": 35,
+    "term_correct": 35,
+    "term_false": 2,
+    "course_total": 84,
+    "course_correct": 62,
+    "course_false": 3
+   },
+   "captionfix_whisper": {
+    "wer": 0.0516,
+    "ref_words": 6479,
+    "substitutions": 60,
+    "deletions": 29,
+    "insertions": 245,
+    "rare_total": 84,
+    "rare_correct": 83,
+    "term_total": 35,
+    "term_correct": 35,
+    "term_false": 2,
+    "course_total": 84,
+    "course_correct": 83,
+    "course_false": 5
+   },
+   "corrections_zoom": {
+    "kept": 0,
+    "fixed": 0,
+    "broke": 0,
+    "still_wrong": 0,
+    "by_source": {},
+    "examples": []
+   },
+   "review_zoom": {
+    "errors": 226,
+    "course_errors": 14,
+    "words": 6251,
+    "model@0.05": {
+     "caught": 41,
+     "course_caught": 3,
+     "review_minutes": 2.09
+    },
+    "model@0.1": {
+     "caught": 75,
+     "course_caught": 3,
+     "review_minutes": 4.16
+    },
+    "model@0.15": {
+     "caught": 93,
+     "course_caught": 3,
+     "review_minutes": 6.24
+    },
+    "model@0.2": {
+     "caught": 105,
+     "course_caught": 4,
+     "review_minutes": 8.33
+    },
+    "disagreement_only@0.05": {
+     "caught": 48,
+     "course_caught": 3,
+     "review_minutes": 2.06
+    },
+    "disagreement_only@0.1": {
+     "caught": 75,
+     "course_caught": 3,
+     "review_minutes": 4.16
+    },
+    "disagreement_only@0.15": {
+     "caught": 97,
+     "course_caught": 3,
+     "review_minutes": 6.25
+    },
+    "disagreement_only@0.2": {
+     "caught": 105,
+     "course_caught": 4,
+     "review_minutes": 8.35
+    },
+    "course_first@0.05": {
+     "caught": 48,
+     "course_caught": 3,
+     "review_minutes": 2.06
+    },
+    "course_first@0.1": {
+     "caught": 75,
+     "course_caught": 3,
+     "review_minutes": 4.16
+    },
+    "course_first@0.15": {
+     "caught": 97,
+     "course_caught": 3,
+     "review_minutes": 6.25
+    },
+    "course_first@0.2": {
+     "caught": 105,
+     "course_caught": 4,
+     "review_minutes": 8.35
+    },
+    "random@0.05": {
+     "caught": 17,
+     "course_caught": 0,
+     "review_minutes": 2.07
+    },
+    "random@0.1": {
+     "caught": 31,
+     "course_caught": 0,
+     "review_minutes": 4.17
+    },
+    "random@0.15": {
+     "caught": 40,
+     "course_caught": 2,
+     "review_minutes": 6.26
+    },
+    "random@0.2": {
+     "caught": 60,
+     "course_caught": 3,
+     "review_minutes": 8.34
+    }
+   },
+   "corrections_whisper": {
+    "kept": 3,
+    "fixed": 2,
+    "broke": 1,
+    "still_wrong": 0,
+    "by_source": {
+     "second": {
+      "kept": 3,
+      "fixed": 2,
+      "broke": 1,
+      "still_wrong": 0
+     }
+    },
+    "examples": [
+     {
+      "t": 962.12,
+      "end": 962.8,
+      "from": "place holder",
+      "to": "placeholder",
+      "source": "second",
+      "delta": 1.102,
+      "outcome": "fixed"
+     },
+     {
+      "t": 1067.8,
+      "end": 1068.24,
+      "from": "doc string",
+      "to": "docstring",
+      "source": "second",
+      "delta": 0.836,
+      "outcome": "fixed"
+     },
+     {
+      "t": 1296.58,
+      "end": 1297.3,
+      "from": "l dot append,",
+      "to": "l.append,",
+      "source": "second",
+      "delta": 1.545,
+      "outcome": "broke"
+     }
+    ]
+   },
+   "review_whisper": {
+    "errors": 305,
+    "course_errors": 17,
+    "words": 6417,
+    "model@0.05": {
+     "caught": 70,
+     "course_caught": 4,
+     "review_minutes": 2.08
+    },
+    "model@0.1": {
+     "caught": 135,
+     "course_caught": 5,
+     "review_minutes": 4.16
+    },
+    "model@0.15": {
+     "caught": 170,
+     "course_caught": 5,
+     "review_minutes": 6.26
+    },
+    "model@0.2": {
+     "caught": 201,
+     "course_caught": 7,
+     "review_minutes": 8.34
+    },
+    "disagreement_only@0.05": {
+     "caught": 91,
+     "course_caught": 0,
+     "review_minutes": 2.07
+    },
+    "disagreement_only@0.1": {
+     "caught": 135,
+     "course_caught": 5,
+     "review_minutes": 4.16
+    },
+    "disagreement_only@0.15": {
+     "caught": 175,
+     "course_caught": 5,
+     "review_minutes": 6.25
+    },
+    "disagreement_only@0.2": {
+     "caught": 198,
+     "course_caught": 6,
+     "review_minutes": 8.35
+    },
+    "course_first@0.05": {
+     "caught": 91,
+     "course_caught": 0,
+     "review_minutes": 2.07
+    },
+    "course_first@0.1": {
+     "caught": 135,
+     "course_caught": 5,
+     "review_minutes": 4.16
+    },
+    "course_first@0.15": {
+     "caught": 176,
+     "course_caught": 5,
+     "review_minutes": 6.26
+    },
+    "course_first@0.2": {
+     "caught": 198,
+     "course_caught": 6,
+     "review_minutes": 8.35
+    },
+    "random@0.05": {
+     "caught": 14,
+     "course_caught": 0,
+     "review_minutes": 2.08
+    },
+    "random@0.1": {
+     "caught": 28,
+     "course_caught": 0,
+     "review_minutes": 4.17
+    },
+    "random@0.15": {
+     "caught": 40,
+     "course_caught": 4,
+     "review_minutes": 6.26
+    },
+    "random@0.2": {
+     "caught": 59,
+     "course_caught": 5,
+     "review_minutes": 8.33
+    }
+   },
+   "timing": {
+    "check_zoom": 55.0,
+    "check_whisper": 0.0
+   }
+  },
+  {
+   "id": "6.172-03",
+   "course": "6.172 Performance Engineering of Software Systems (Fall 2018)",
+   "title": "Bit Hacks",
+   "minutes": 78.9,
+   "slide_terms": 42,
+   "zoom": {
+    "wer": 0.0449,
+    "ref_words": 12432,
+    "substitutions": 197,
+    "deletions": 180,
+    "insertions": 181,
+    "rare_total": 231,
+    "rare_correct": 199,
+    "term_total": 97,
+    "term_correct": 79,
+    "term_false": 0,
+    "course_total": 231,
+    "course_correct": 199,
+    "course_false": 6
+   },
+   "zoom_vocab": {
+    "wer": 0.0473,
+    "ref_words": 12432,
+    "substitutions": 210,
+    "deletions": 214,
+    "insertions": 164,
+    "rare_total": 231,
+    "rare_correct": 192,
+    "term_total": 97,
+    "term_correct": 96,
+    "term_false": 20,
+    "course_total": 231,
+    "course_correct": 192,
+    "course_false": 38
+   },
+   "whisper": {
+    "wer": 0.0531,
+    "ref_words": 12432,
+    "substitutions": 277,
+    "deletions": 101,
+    "insertions": 282,
+    "rare_total": 231,
+    "rare_correct": 159,
+    "term_total": 97,
+    "term_correct": 71,
+    "term_false": 1,
+    "course_total": 231,
+    "course_correct": 159,
+    "course_false": 33
+   },
+   "whisper_primed": {
+    "wer": 0.0511,
+    "ref_words": 12432,
+    "substitutions": 279,
+    "deletions": 124,
+    "insertions": 232,
+    "rare_total": 231,
+    "rare_correct": 171,
+    "term_total": 97,
+    "term_correct": 82,
+    "term_false": 35,
+    "course_total": 231,
+    "course_correct": 171,
+    "course_false": 48
+   },
+   "captionfix_zoom": {
+    "wer": 0.0448,
+    "ref_words": 12432,
+    "substitutions": 197,
+    "deletions": 180,
+    "insertions": 180,
+    "rare_total": 231,
+    "rare_correct": 199,
+    "term_total": 97,
+    "term_correct": 79,
+    "term_false": 0,
+    "course_total": 231,
+    "course_correct": 199,
+    "course_false": 6
+   },
+   "captionfix_whisper": {
+    "wer": 0.0529,
+    "ref_words": 12432,
+    "substitutions": 277,
+    "deletions": 109,
+    "insertions": 272,
+    "rare_total": 231,
+    "rare_correct": 164,
+    "term_total": 97,
+    "term_correct": 75,
+    "term_false": 17,
+    "course_total": 231,
+    "course_correct": 164,
+    "course_false": 38
+   },
+   "corrections_zoom": {
+    "kept": 2,
+    "fixed": 1,
+    "broke": 1,
+    "still_wrong": 0,
+    "by_source": {
+     "second": {
+      "kept": 2,
+      "fixed": 1,
+      "broke": 1,
+      "still_wrong": 0
+     }
+    },
+    "examples": [
+     {
+      "t": 2268.45,
+      "end": 2269.18,
+      "from": "risk prediction",
+      "to": "misprediction",
+      "source": "second",
+      "delta": 3.952,
+      "outcome": "fixed"
+     },
+     {
+      "t": 3976.0,
+      "end": 3976.79,
+      "from": "right-anded",
+      "to": "right-handed",
+      "source": "second",
+      "delta": 4.685,
+      "outcome": "broke"
+     }
+    ]
+   },
+   "review_zoom": {
+    "errors": 406,
+    "course_errors": 39,
+    "words": 11970,
+    "model@0.05": {
+     "caught": 59,
+     "course_caught": 2,
+     "review_minutes": 3.94
+    },
+    "model@0.1": {
+     "caught": 116,
+     "course_caught": 4,
+     "review_minutes": 7.89
+    },
+    "model@0.15": {
+     "caught": 166,
+     "course_caught": 9,
+     "review_minutes": 11.82
+    },
+    "model@0.2": {
+     "caught": 205,
+     "course_caught": 13,
+     "review_minutes": 15.77
+    },
+    "disagreement_only@0.05": {
+     "caught": 53,
+     "course_caught": 0,
+     "review_minutes": 3.94
+    },
+    "disagreement_only@0.1": {
+     "caught": 118,
+     "course_caught": 4,
+     "review_minutes": 7.88
+    },
+    "disagreement_only@0.15": {
+     "caught": 164,
+     "course_caught": 9,
+     "review_minutes": 11.83
+    },
+    "disagreement_only@0.2": {
+     "caught": 204,
+     "course_caught": 12,
+     "review_minutes": 15.76
+    },
+    "course_first@0.05": {
+     "caught": 49,
+     "course_caught": 1,
+     "review_minutes": 3.93
+    },
+    "course_first@0.1": {
+     "caught": 118,
+     "course_caught": 4,
+     "review_minutes": 7.88
+    },
+    "course_first@0.15": {
+     "caught": 164,
+     "course_caught": 9,
+     "review_minutes": 11.83
+    },
+    "course_first@0.2": {
+     "caught": 204,
+     "course_caught": 12,
+     "review_minutes": 15.76
+    },
+    "random@0.05": {
+     "caught": 31,
+     "course_caught": 2,
+     "review_minutes": 3.94
+    },
+    "random@0.1": {
+     "caught": 45,
+     "course_caught": 4,
+     "review_minutes": 7.89
+    },
+    "random@0.15": {
+     "caught": 57,
+     "course_caught": 6,
+     "review_minutes": 11.83
+    },
+    "random@0.2": {
+     "caught": 83,
+     "course_caught": 13,
+     "review_minutes": 15.76
+    }
+   },
+   "corrections_whisper": {
+    "kept": 22,
+    "fixed": 6,
+    "broke": 5,
+    "still_wrong": 11,
+    "by_source": {
+     "sound": {
+      "kept": 10,
+      "fixed": 0,
+      "broke": 0,
+      "still_wrong": 10
+     },
+     "second": {
+      "kept": 11,
+      "fixed": 5,
+      "broke": 5,
+      "still_wrong": 1
+     },
+     "loop": {
+      "kept": 1,
+      "fixed": 1,
+      "broke": 0,
+      "still_wrong": 0
+     }
+    },
+    "examples": [
+     {
+      "t": 2628.4,
+      "end": 2628.92,
+      "from": "De Bruyne.",
+      "to": "deBruijn.",
+      "source": "sound",
+      "delta": 6.719,
+      "outcome": "still_wrong"
+     },
+     {
+      "t": 2640.14,
+      "end": 2640.54,
+      "from": "De Bruyne",
+      "to": "deBruijn",
+      "source": "sound",
+      "delta": 5.19,
+      "outcome": "still_wrong"
+     },
+     {
+      "t": 3145.56,
+      "end": 3145.96,
+      "from": "DeBruyne",
+      "to": "deBruijn",
+      "source": "sound",
+      "delta": 1.617,
+      "outcome": "still_wrong"
+     },
+     {
+      "t": 3234.12,
+      "end": 3234.5,
+      "from": "DeBruyne",
+      "to": "deBruijn",
+      "source": "sound",
+      "delta": 5.519,
+      "outcome": "still_wrong"
+     },
+     {
+      "t": 3331.26,
+      "end": 3331.68,
+      "from": "DeBruyne",
+      "to": "deBruijn",
+      "source": "sound",
+      "delta": 3.452,
+      "outcome": "still_wrong"
+     },
+     {
+      "t": 3350.0,
+      "end": 3350.42,
+      "from": "DeBruyne",
+      "to": "deBruijn",
+      "source": "sound",
+      "delta": 5.388,
+      "outcome": "still_wrong"
+     },
+     {
+      "t": 3385.34,
+      "end": 3385.78,
+      "from": "DeBruyne",
+      "to": "deBruijn",
+      "source": "sound",
+      "delta": 3.262,
+      "outcome": "still_wrong"
+     },
+     {
+      "t": 3438.52,
+      "end": 3438.9,
+      "from": "DeBruyne",
+      "to": "deBruijn",
+      "source": "sound",
+      "delta": 5.959,
+      "outcome": "still_wrong"
+     },
+     {
+      "t": 3481.44,
+      "end": 3481.88,
+      "from": "DeBruyne",
+      "to": "deBruijn",
+      "source": "sound",
+      "delta": 5.902,
+      "outcome": "still_wrong"
+     },
+     {
+      "t": 4667.3,
+      "end": 4667.68,
+      "from": "De Bruyne",
+      "to": "deBruijn",
+      "source": "sound",
+      "delta": 4.889,
+      "outcome": "still_wrong"
+     },
+     {
+      "t": 671.78,
+      "end": 672.12,
+      "from": "k's",
+      "to": "kth",
+      "source": "second",
+      "delta": 5.784,
+      "outcome": "fixed"
+     },
+     {
+      "t": 1476.08,
+      "end": 1476.84,
+      "from": "x or",
+      "to": "xOR",
+      "source": "second",
+      "delta": 1.012,
+      "outcome": "fixed"
+     },
+     {
+      "t": 2233.4,
+      "end": 2233.76,
+      "from": "and it",
+      "to": "anded",
+      "source": "second",
+      "delta": 2.721,
+      "outcome": "fixed"
+     },
+     {
+      "t": 2663.72,
+      "end": 2664.32,
+      "from": "math magic",
+      "to": "Mathemagic",
+      "source": "second",
+      "delta": 5.295,
+      "outcome": "fixed"
+     },
+     {
+      "t": 3064.7,
+      "end": 3065.1,
+      "from": "DeBruyne",
+      "to": "DeBruijn",
+      "source": "second",
+      "delta": 2.905,
+      "outcome": "still_wrong"
+     },
+     {
+      "t": 3592.98,
+      "end": 3593.52,
+      "from": "chess board",
+      "to": "chessboard",
+      "source": "second",
+      "delta": 2.67,
+      "outcome": "fixed"
+     },
+     {
+      "t": 3961.64,
+      "end": 3962.28,
+      "from": "bit vector,",
+      "to": "bitvector,",
+      "source": "second",
+      "delta": 2.188,
+      "outcome": "broke"
+     },
+     {
+      "t": 4086.4,
+      "end": 4086.98,
+      "from": "pop count",
+      "to": "popcount",
+      "source": "second",
+      "delta": 1.727,
+      "outcome": "broke"
+     },
+     {
+      "t": 4522.26,
+      "end": 4522.78,
+      "from": "pop count.",
+      "to": "popcount.",
+      "source": "second",
+      "delta": 1.732,
+      "outcome": "broke"
+     },
+     {
+      "t": 4619.72,
+      "end": 4620.3,
+      "from": "pop count",
+      "to": "popcount",
+      "source": "second",
+      "delta": 1.198,
+      "outcome": "broke"
+     },
+     {
+      "t": 4684.22,
+      "end": 4684.7,
+      "from": "pop count,",
+      "to": "popcount,",
+      "source": "second",
+      "delta": 1.898,
+      "outcome": "broke"
+     },
+     {
+      "t": 3043.74,
+      "end": 3052.14,
+      "from": "Thank you. Thank you. Thank you. Thank you.",
+      "to": "It's",
+      "source": "loop",
+      "delta": null,
+      "outcome": "fixed"
+     }
+    ]
+   },
+   "review_whisper": {
+    "errors": 572,
+    "course_errors": 84,
+    "words": 12121,
+    "model@0.05": {
+     "caught": 135,
+     "course_caught": 9,
+     "review_minutes": 3.94
+    },
+    "model@0.1": {
+     "caught": 236,
+     "course_caught": 41,
+     "review_minutes": 7.88
+    },
+    "model@0.15": {
+     "caught": 301,
+     "course_caught": 50,
+     "review_minutes": 11.83
+    },
+    "model@0.2": {
+     "caught": 334,
+     "course_caught": 53,
+     "review_minutes": 15.77
+    },
+    "disagreement_only@0.05": {
+     "caught": 151,
+     "course_caught": 27,
+     "review_minutes": 3.93
+    },
+    "disagreement_only@0.1": {
+     "caught": 245,
+     "course_caught": 52,
+     "review_minutes": 7.87
+    },
+    "disagreement_only@0.15": {
+     "caught": 312,
+     "course_caught": 62,
+     "review_minutes": 11.82
+    },
+    "disagreement_only@0.2": {
+     "caught": 346,
+     "course_caught": 64,
+     "review_minutes": 15.78
+    },
+    "course_first@0.05": {
+     "caught": 151,
+     "course_caught": 27,
+     "review_minutes": 3.93
+    },
+    "course_first@0.1": {
+     "caught": 245,
+     "course_caught": 52,
+     "review_minutes": 7.87
+    },
+    "course_first@0.15": {
+     "caught": 312,
+     "course_caught": 62,
+     "review_minutes": 11.82
+    },
+    "course_first@0.2": {
+     "caught": 346,
+     "course_caught": 64,
+     "review_minutes": 15.76
+    },
+    "random@0.05": {
+     "caught": 53,
+     "course_caught": 5,
+     "review_minutes": 3.94
+    },
+    "random@0.1": {
+     "caught": 84,
+     "course_caught": 11,
+     "review_minutes": 7.89
+    },
+    "random@0.15": {
+     "caught": 130,
+     "course_caught": 19,
+     "review_minutes": 11.83
+    },
+    "random@0.2": {
+     "caught": 166,
+     "course_caught": 29,
+     "review_minutes": 15.78
+    }
+   },
+   "timing": {
+    "check_zoom": 121.7,
+    "check_whisper": 0.0
+   }
+  },
+  {
+   "id": "6.172-04",
+   "course": "6.172 Performance Engineering of Software Systems (Fall 2018)",
+   "title": "Assembly Language and Computer Architecture",
+   "minutes": 77.6,
+   "slide_terms": 133,
+   "zoom": {
+    "wer": 0.0625,
+    "ref_words": 11112,
+    "substitutions": 161,
+    "deletions": 198,
+    "insertions": 336,
+    "rare_total": 245,
+    "rare_correct": 225,
+    "term_total": 681,
+    "term_correct": 654,
+    "term_false": 27,
+    "course_total": 767,
+    "course_correct": 726,
+    "course_false": 46
+   },
+   "zoom_vocab": {
+    "wer": 0.0605,
+    "ref_words": 11112,
+    "substitutions": 164,
+    "deletions": 195,
+    "insertions": 313,
+    "rare_total": 245,
+    "rare_correct": 227,
+    "term_total": 681,
+    "term_correct": 654,
+    "term_false": 35,
+    "course_total": 767,
+    "course_correct": 727,
+    "course_false": 52
+   },
+   "whisper": {
+    "wer": 0.0814,
+    "ref_words": 11112,
+    "substitutions": 183,
+    "deletions": 224,
+    "insertions": 498,
+    "rare_total": 245,
+    "rare_correct": 218,
+    "term_total": 681,
+    "term_correct": 648,
+    "term_false": 36,
+    "course_total": 767,
+    "course_correct": 719,
+    "course_false": 56
+   },
+   "whisper_primed": {
+    "wer": 0.0638,
+    "ref_words": 11112,
+    "substitutions": 168,
+    "deletions": 97,
+    "insertions": 444,
+    "rare_total": 245,
+    "rare_correct": 229,
+    "term_total": 681,
+    "term_correct": 660,
+    "term_false": 42,
+    "course_total": 767,
+    "course_correct": 733,
+    "course_false": 59
+   },
+   "captionfix_zoom": {
+    "wer": 0.0625,
+    "ref_words": 11112,
+    "substitutions": 161,
+    "deletions": 198,
+    "insertions": 336,
+    "rare_total": 245,
+    "rare_correct": 226,
+    "term_total": 681,
+    "term_correct": 655,
+    "term_false": 27,
+    "course_total": 767,
+    "course_correct": 727,
+    "course_false": 46
+   },
+   "captionfix_whisper": {
+    "wer": 0.076,
+    "ref_words": 11112,
+    "substitutions": 176,
+    "deletions": 175,
+    "insertions": 494,
+    "rare_total": 245,
+    "rare_correct": 223,
+    "term_total": 681,
+    "term_correct": 653,
+    "term_false": 31,
+    "course_total": 767,
+    "course_correct": 725,
+    "course_false": 51
+   },
+   "corrections_zoom": {
+    "kept": 3,
+    "fixed": 1,
+    "broke": 1,
+    "still_wrong": 0,
+    "by_source": {
+     "second": {
+      "kept": 3,
+      "fixed": 1,
+      "broke": 1,
+      "still_wrong": 0
+     }
+    },
+    "examples": [
+     {
+      "t": 3153.08,
+      "end": 3153.72,
+      "from": "element-wise",
+      "to": "element-wide",
+      "source": "second",
+      "delta": 2.341,
+      "outcome": "broke"
+     },
+     {
+      "t": 3568.61,
+      "end": 3569.08,
+      "from": "out of order,",
+      "to": "out-of-order,",
+      "source": "second",
+      "delta": 2.201,
+      "outcome": "neither"
+     },
+     {
+      "t": 4248.82,
+      "end": 4248.94,
+      "from": "RX",
+      "to": "RAX",
+      "source": "second",
+      "delta": 4.269,
+      "outcome": "fixed"
+     }
+    ]
+   },
+   "review_zoom": {
+    "errors": 540,
+    "course_errors": 88,
+    "words": 10797,
+    "model@0.05": {
+     "caught": 101,
+     "course_caught": 14,
+     "review_minutes": 3.86
+    },
+    "model@0.1": {
+     "caught": 192,
+     "course_caught": 31,
+     "review_minutes": 7.76
+    },
+    "model@0.15": {
+     "caught": 302,
+     "course_caught": 45,
+     "review_minutes": 11.63
+    },
+    "model@0.2": {
+     "caught": 336,
+     "course_caught": 52,
+     "review_minutes": 15.5
+    },
+    "disagreement_only@0.05": {
+     "caught": 109,
+     "course_caught": 15,
+     "review_minutes": 3.86
+    },
+    "disagreement_only@0.1": {
+     "caught": 217,
+     "course_caught": 29,
+     "review_minutes": 7.75
+    },
+    "disagreement_only@0.15": {
+     "caught": 299,
+     "course_caught": 44,
+     "review_minutes": 11.63
+    },
+    "disagreement_only@0.2": {
+     "caught": 331,
+     "course_caught": 50,
+     "review_minutes": 15.49
+    },
+    "course_first@0.05": {
+     "caught": 98,
+     "course_caught": 22,
+     "review_minutes": 3.87
+    },
+    "course_first@0.1": {
+     "caught": 215,
+     "course_caught": 27,
+     "review_minutes": 7.74
+    },
+    "course_first@0.15": {
+     "caught": 299,
+     "course_caught": 44,
+     "review_minutes": 11.63
+    },
+    "course_first@0.2": {
+     "caught": 331,
+     "course_caught": 50,
+     "review_minutes": 15.51
+    },
+    "random@0.05": {
+     "caught": 32,
+     "course_caught": 4,
+     "review_minutes": 3.86
+    },
+    "random@0.1": {
+     "caught": 64,
+     "course_caught": 7,
+     "review_minutes": 7.75
+    },
+    "random@0.15": {
+     "caught": 104,
+     "course_caught": 18,
+     "review_minutes": 11.63
+    },
+    "random@0.2": {
+     "caught": 139,
+     "course_caught": 21,
+     "review_minutes": 15.51
+    }
+   },
+   "corrections_whisper": {
+    "kept": 6,
+    "fixed": 4,
+    "broke": 1,
+    "still_wrong": 1,
+    "by_source": {
+     "second": {
+      "kept": 5,
+      "fixed": 4,
+      "broke": 1,
+      "still_wrong": 0
+     },
+     "loop": {
+      "kept": 1,
+      "fixed": 0,
+      "broke": 0,
+      "still_wrong": 1
+     }
+    },
+    "examples": [
+     {
+      "t": 650.28,
+      "end": 650.82,
+      "from": "op codes",
+      "to": "opcodes",
+      "source": "second",
+      "delta": 3.022,
+      "outcome": "broke"
+     },
+     {
+      "t": 1230.66,
+      "end": 1231.4,
+      "from": "op code",
+      "to": "opcode",
+      "source": "second",
+      "delta": 1.722,
+      "outcome": "fixed"
+     },
+     {
+      "t": 1569.54,
+      "end": 1570.22,
+      "from": "op codes",
+      "to": "opcodes",
+      "source": "second",
+      "delta": 0.819,
+      "outcome": "fixed"
+     },
+     {
+      "t": 3275.12,
+      "end": 3275.76,
+      "from": "operators. So",
+      "to": "operands.",
+      "source": "second",
+      "delta": 5.003,
+      "outcome": "fixed"
+     },
+     {
+      "t": 3299.08,
+      "end": 3301.52,
+      "from": "op codes",
+      "to": "opcodes",
+      "source": "second",
+      "delta": 5.3,
+      "outcome": "fixed"
+     },
+     {
+      "t": 4046.74,
+      "end": 4076.64,
+      "from": "FMA, what's FMA? FMA, what's FMA? FMA, what's FMA?",
+      "to": "For memory access to memory. Not for memory access. This is actually floating point multiply and add. It's called linear algebra. So when you do matrix multiplication, you're doing dot product. You're doing multiplies and adds. So that kind of thing, that's where you do a lot of those. So how does the hardware accommodate these complex? operations.",
+      "source": "loop",
+      "delta": null,
+      "outcome": "still_wrong"
+     }
+    ]
+   },
+   "review_whisper": {
+    "errors": 696,
+    "course_errors": 113,
+    "words": 10892,
+    "model@0.05": {
+     "caught": 150,
+     "course_caught": 32,
+     "review_minutes": 3.87
+    },
+    "model@0.1": {
+     "caught": 318,
+     "course_caught": 48,
+     "review_minutes": 7.73
+    },
+    "model@0.15": {
+     "caught": 398,
+     "course_caught": 62,
+     "review_minutes": 11.61
+    },
+    "model@0.2": {
+     "caught": 440,
+     "course_caught": 67,
+     "review_minutes": 15.48
+    },
+    "disagreement_only@0.05": {
+     "caught": 174,
+     "course_caught": 17,
+     "review_minutes": 3.73
+    },
+    "disagreement_only@0.1": {
+     "caught": 317,
+     "course_caught": 45,
+     "review_minutes": 7.73
+    },
+    "disagreement_only@0.15": {
+     "caught": 397,
+     "course_caught": 61,
+     "review_minutes": 11.63
+    },
+    "disagreement_only@0.2": {
+     "caught": 452,
+     "course_caught": 66,
+     "review_minutes": 15.51
+    },
+    "course_first@0.05": {
+     "caught": 163,
+     "course_caught": 17,
+     "review_minutes": 3.88
+    },
+    "course_first@0.1": {
+     "caught": 317,
+     "course_caught": 45,
+     "review_minutes": 7.73
+    },
+    "course_first@0.15": {
+     "caught": 397,
+     "course_caught": 61,
+     "review_minutes": 11.63
+    },
+    "course_first@0.2": {
+     "caught": 452,
+     "course_caught": 66,
+     "review_minutes": 15.51
+    },
+    "random@0.05": {
+     "caught": 35,
+     "course_caught": 2,
+     "review_minutes": 3.86
+    },
+    "random@0.1": {
+     "caught": 83,
+     "course_caught": 8,
+     "review_minutes": 7.73
+    },
+    "random@0.15": {
+     "caught": 133,
+     "course_caught": 20,
+     "review_minutes": 11.63
+    },
+    "random@0.2": {
+     "caught": 171,
+     "course_caught": 29,
+     "review_minutes": 15.51
+    }
+   },
+   "timing": {
+    "check_zoom": 169.1,
+    "check_whisper": 0.0
+   }
+  },
+  {
+   "id": "6.172-09",
+   "course": "6.172 Performance Engineering of Software Systems (Fall 2018)",
+   "title": "What Compilers Can and Cannot Do",
+   "minutes": 78.8,
+   "slide_terms": 81,
+   "zoom": {
+    "wer": 0.0496,
+    "ref_words": 11711,
+    "substitutions": 183,
+    "deletions": 150,
+    "insertions": 248,
+    "rare_total": 278,
+    "rare_correct": 250,
+    "term_total": 540,
+    "term_correct": 526,
+    "term_false": 18,
+    "course_total": 620,
+    "course_correct": 586,
+    "course_false": 56
+   },
+   "zoom_vocab": {
+    "wer": 0.0488,
+    "ref_words": 11711,
+    "substitutions": 179,
+    "deletions": 143,
+    "insertions": 250,
+    "rare_total": 278,
+    "rare_correct": 248,
+    "term_total": 540,
+    "term_correct": 526,
+    "term_false": 23,
+    "course_total": 620,
+    "course_correct": 584,
+    "course_false": 63
+   },
+   "whisper": {
+    "wer": 0.0675,
+    "ref_words": 11711,
+    "substitutions": 172,
+    "deletions": 108,
+    "insertions": 511,
+    "rare_total": 278,
+    "rare_correct": 225,
+    "term_total": 540,
+    "term_correct": 508,
+    "term_false": 27,
+    "course_total": 620,
+    "course_correct": 559,
+    "course_false": 87
+   },
+   "whisper_primed": {
+    "wer": 0.0636,
+    "ref_words": 11711,
+    "substitutions": 189,
+    "deletions": 77,
+    "insertions": 479,
+    "rare_total": 278,
+    "rare_correct": 236,
+    "term_total": 540,
+    "term_correct": 518,
+    "term_false": 25,
+    "course_total": 620,
+    "course_correct": 571,
+    "course_false": 95
+   },
+   "captionfix_zoom": {
+    "wer": 0.0499,
+    "ref_words": 11711,
+    "substitutions": 185,
+    "deletions": 152,
+    "insertions": 247,
+    "rare_total": 278,
+    "rare_correct": 248,
+    "term_total": 540,
+    "term_correct": 526,
+    "term_false": 20,
+    "course_total": 620,
+    "course_correct": 584,
+    "course_false": 59
+   },
+   "captionfix_whisper": {
+    "wer": 0.0671,
+    "ref_words": 11711,
+    "substitutions": 167,
+    "deletions": 107,
+    "insertions": 512,
+    "rare_total": 278,
+    "rare_correct": 232,
+    "term_total": 540,
+    "term_correct": 512,
+    "term_false": 28,
+    "course_total": 620,
+    "course_correct": 566,
+    "course_false": 85
+   },
+   "corrections_zoom": {
+    "kept": 7,
+    "fixed": 0,
+    "broke": 2,
+    "still_wrong": 4,
+    "by_source": {
+     "second": {
+      "kept": 7,
+      "fixed": 0,
+      "broke": 2,
+      "still_wrong": 4
+     }
+    },
+    "examples": [
+     {
+      "t": 120.57,
+      "end": 120.73,
+      "from": "Lichtenstein",
+      "to": "Leisessen",
+      "source": "second",
+      "delta": 3.438,
+      "outcome": "still_wrong"
+     },
+     {
+      "t": 810.18,
+      "end": 810.65,
+      "from": "optimiz \u2014",
+      "to": "optimizations.",
+      "source": "second",
+      "delta": 6.244,
+      "outcome": "still_wrong"
+     },
+     {
+      "t": 883.71,
+      "end": 884.51,
+      "from": "Short circuiting.",
+      "to": "Short-circuiting.",
+      "source": "second",
+      "delta": 5.035,
+      "outcome": "neither"
+     },
+     {
+      "t": 2226.08,
+      "end": 2226.09,
+      "from": "alloc,",
+      "to": "ALCA,",
+      "source": "second",
+      "delta": 3.543,
+      "outcome": "still_wrong"
+     },
+     {
+      "t": 2621.39,
+      "end": 2622.31,
+      "from": "vec scale,",
+      "to": "vecscale,",
+      "source": "second",
+      "delta": 3.03,
+      "outcome": "broke"
+     },
+     {
+      "t": 2624.3,
+      "end": 2624.93,
+      "from": "vec add",
+      "to": "vecadd",
+      "source": "second",
+      "delta": 3.61,
+      "outcome": "broke"
+     },
+     {
+      "t": 4322.52,
+      "end": 4322.72,
+      "from": "could be",
+      "to": "computes",
+      "source": "second",
+      "delta": 4.783,
+      "outcome": "still_wrong"
+     }
+    ]
+   },
+   "review_zoom": {
+    "errors": 457,
+    "course_errors": 116,
+    "words": 11413,
+    "model@0.05": {
+     "caught": 164,
+     "course_caught": 39,
+     "review_minutes": 3.91
+    },
+    "model@0.1": {
+     "caught": 258,
+     "course_caught": 64,
+     "review_minutes": 7.87
+    },
+    "model@0.15": {
+     "caught": 310,
+     "course_caught": 81,
+     "review_minutes": 11.81
+    },
+    "model@0.2": {
+     "caught": 346,
+     "course_caught": 87,
+     "review_minutes": 15.74
+    },
+    "disagreement_only@0.05": {
+     "caught": 158,
+     "course_caught": 38,
+     "review_minutes": 3.93
+    },
+    "disagreement_only@0.1": {
+     "caught": 255,
+     "course_caught": 62,
+     "review_minutes": 7.87
+    },
+    "disagreement_only@0.15": {
+     "caught": 311,
+     "course_caught": 79,
+     "review_minutes": 11.81
+    },
+    "disagreement_only@0.2": {
+     "caught": 345,
+     "course_caught": 86,
+     "review_minutes": 15.75
+    },
+    "course_first@0.05": {
+     "caught": 158,
+     "course_caught": 38,
+     "review_minutes": 3.93
+    },
+    "course_first@0.1": {
+     "caught": 255,
+     "course_caught": 62,
+     "review_minutes": 7.87
+    },
+    "course_first@0.15": {
+     "caught": 311,
+     "course_caught": 79,
+     "review_minutes": 11.81
+    },
+    "course_first@0.2": {
+     "caught": 345,
+     "course_caught": 86,
+     "review_minutes": 15.75
+    },
+    "random@0.05": {
+     "caught": 27,
+     "course_caught": 14,
+     "review_minutes": 3.93
+    },
+    "random@0.1": {
+     "caught": 68,
+     "course_caught": 23,
+     "review_minutes": 7.87
+    },
+    "random@0.15": {
+     "caught": 94,
+     "course_caught": 33,
+     "review_minutes": 11.81
+    },
+    "random@0.2": {
+     "caught": 124,
+     "course_caught": 38,
+     "review_minutes": 15.75
+    }
+   },
+   "corrections_whisper": {
+    "kept": 13,
+    "fixed": 7,
+    "broke": 2,
+    "still_wrong": 3,
+    "by_source": {
+     "sound": {
+      "kept": 1,
+      "fixed": 1,
+      "broke": 0,
+      "still_wrong": 0
+     },
+     "second": {
+      "kept": 12,
+      "fixed": 6,
+      "broke": 2,
+      "still_wrong": 3
+     }
+    },
+    "examples": [
+     {
+      "t": 26.82,
+      "end": 27.4,
+      "from": "Chartle.",
+      "to": "Schardl.",
+      "source": "sound",
+      "delta": 1.718,
+      "outcome": "fixed"
+     },
+     {
+      "t": 756.32,
+      "end": 756.74,
+      "from": "scaler",
+      "to": "scalar",
+      "source": "second",
+      "delta": 2.301,
+      "outcome": "fixed"
+     },
+     {
+      "t": 1582.18,
+      "end": 1582.62,
+      "from": "stimulates",
+      "to": "simulates",
+      "source": "second",
+      "delta": 1.201,
+      "outcome": "fixed"
+     },
+     {
+      "t": 1705.12,
+      "end": 1706.5,
+      "from": "one line",
+      "to": "one-line",
+      "source": "second",
+      "delta": 0.547,
+      "outcome": "neither"
+     },
+     {
+      "t": 1791.46,
+      "end": 1792.06,
+      "from": "LLVMIR.",
+      "to": "LLVM IR.",
+      "source": "second",
+      "delta": 0.854,
+      "outcome": "fixed"
+     },
+     {
+      "t": 2766.96,
+      "end": 2767.34,
+      "from": "paste",
+      "to": "pastes",
+      "source": "second",
+      "delta": 0.954,
+      "outcome": "fixed"
+     },
+     {
+      "t": 3199.7,
+      "end": 3200.02,
+      "from": "inline.",
+      "to": "inlined.",
+      "source": "second",
+      "delta": 4.272,
+      "outcome": "broke"
+     },
+     {
+      "t": 3559.66,
+      "end": 3560.54,
+      "from": "terabyte size",
+      "to": "terabyte-sized",
+      "source": "second",
+      "delta": 0.857,
+      "outcome": "broke"
+     },
+     {
+      "t": 3687.46,
+      "end": 3688.04,
+      "from": "LLVMIR,",
+      "to": "LVMIR,",
+      "source": "second",
+      "delta": 2.314,
+      "outcome": "still_wrong"
+     },
+     {
+      "t": 4050.88,
+      "end": 4051.38,
+      "from": "scaler,",
+      "to": "scalar,",
+      "source": "second",
+      "delta": 1.743,
+      "outcome": "fixed"
+     },
+     {
+      "t": 4395.02,
+      "end": 4395.44,
+      "from": "It adds",
+      "to": "Bitwise and of",
+      "source": "second",
+      "delta": 5.079,
+      "outcome": "still_wrong"
+     },
+     {
+      "t": 4531.56,
+      "end": 4532.1,
+      "from": "compile time",
+      "to": "compile-fine",
+      "source": "second",
+      "delta": 0.584,
+      "outcome": "still_wrong"
+     },
+     {
+      "t": 4703.74,
+      "end": 4704.1,
+      "from": "cost",
+      "to": "const",
+      "source": "second",
+      "delta": 1.165,
+      "outcome": "fixed"
+     }
+    ]
+   },
+   "review_whisper": {
+    "errors": 687,
+    "course_errors": 231,
+    "words": 11697,
+    "model@0.05": {
+     "caught": 254,
+     "course_caught": 114,
+     "review_minutes": 3.93
+    },
+    "model@0.1": {
+     "caught": 403,
+     "course_caught": 157,
+     "review_minutes": 7.87
+    },
+    "model@0.15": {
+     "caught": 471,
+     "course_caught": 169,
+     "review_minutes": 11.78
+    },
+    "model@0.2": {
+     "caught": 524,
+     "course_caught": 183,
+     "review_minutes": 15.73
+    },
+    "disagreement_only@0.05": {
+     "caught": 258,
+     "course_caught": 118,
+     "review_minutes": 3.93
+    },
+    "disagreement_only@0.1": {
+     "caught": 395,
+     "course_caught": 155,
+     "review_minutes": 7.86
+    },
+    "disagreement_only@0.15": {
+     "caught": 459,
+     "course_caught": 172,
+     "review_minutes": 11.8
+    },
+    "disagreement_only@0.2": {
+     "caught": 527,
+     "course_caught": 183,
+     "review_minutes": 15.74
+    },
+    "course_first@0.05": {
+     "caught": 258,
+     "course_caught": 118,
+     "review_minutes": 3.93
+    },
+    "course_first@0.1": {
+     "caught": 395,
+     "course_caught": 155,
+     "review_minutes": 7.86
+    },
+    "course_first@0.15": {
+     "caught": 459,
+     "course_caught": 172,
+     "review_minutes": 11.8
+    },
+    "course_first@0.2": {
+     "caught": 527,
+     "course_caught": 183,
+     "review_minutes": 15.74
+    },
+    "random@0.05": {
+     "caught": 30,
+     "course_caught": 6,
+     "review_minutes": 3.93
+    },
+    "random@0.1": {
+     "caught": 74,
+     "course_caught": 24,
+     "review_minutes": 7.86
+    },
+    "random@0.15": {
+     "caught": 116,
+     "course_caught": 32,
+     "review_minutes": 11.8
+    },
+    "random@0.2": {
+     "caught": 165,
+     "course_caught": 44,
+     "review_minutes": 15.75
+    }
+   },
+   "timing": {
+    "check_zoom": 137.0,
+    "check_whisper": 0.0
+   }
+  },
+  {
+   "id": "6.S897-04",
+   "course": "6.S897 Machine Learning for Healthcare (Spring 2019)",
+   "title": "Risk Stratification, Part 1",
+   "minutes": 72.7,
+   "slide_terms": 117,
+   "zoom": {
+    "wer": 0.0599,
+    "ref_words": 12390,
+    "substitutions": 192,
+    "deletions": 81,
+    "insertions": 469,
+    "rare_total": 144,
+    "rare_correct": 128,
+    "term_total": 60,
+    "term_correct": 55,
+    "term_false": 3,
+    "course_total": 150,
+    "course_correct": 132,
+    "course_false": 28
+   },
+   "zoom_vocab": {
+    "wer": 0.0596,
+    "ref_words": 12390,
+    "substitutions": 195,
+    "deletions": 77,
+    "insertions": 467,
+    "rare_total": 144,
+    "rare_correct": 129,
+    "term_total": 60,
+    "term_correct": 60,
+    "term_false": 6,
+    "course_total": 150,
+    "course_correct": 135,
+    "course_false": 30
+   },
+   "whisper": {
+    "wer": 0.0563,
+    "ref_words": 12390,
+    "substitutions": 198,
+    "deletions": 86,
+    "insertions": 413,
+    "rare_total": 144,
+    "rare_correct": 121,
+    "term_total": 60,
+    "term_correct": 50,
+    "term_false": 3,
+    "course_total": 150,
+    "course_correct": 125,
+    "course_false": 25
+   },
+   "whisper_primed": {
+    "wer": 0.0634,
+    "ref_words": 12390,
+    "substitutions": 200,
+    "deletions": 84,
+    "insertions": 501,
+    "rare_total": 144,
+    "rare_correct": 120,
+    "term_total": 60,
+    "term_correct": 51,
+    "term_false": 4,
+    "course_total": 150,
+    "course_correct": 125,
+    "course_false": 31
+   },
+   "captionfix_zoom": {
+    "wer": 0.0599,
+    "ref_words": 12390,
+    "substitutions": 192,
+    "deletions": 81,
+    "insertions": 469,
+    "rare_total": 144,
+    "rare_correct": 128,
+    "term_total": 60,
+    "term_correct": 55,
+    "term_false": 3,
+    "course_total": 150,
+    "course_correct": 132,
+    "course_false": 28
+   },
+   "captionfix_whisper": {
+    "wer": 0.0563,
+    "ref_words": 12390,
+    "substitutions": 198,
+    "deletions": 88,
+    "insertions": 412,
+    "rare_total": 144,
+    "rare_correct": 121,
+    "term_total": 60,
+    "term_correct": 50,
+    "term_false": 3,
+    "course_total": 150,
+    "course_correct": 125,
+    "course_false": 25
+   },
+   "corrections_zoom": {
+    "kept": 0,
+    "fixed": 0,
+    "broke": 0,
+    "still_wrong": 0,
+    "by_source": {},
+    "examples": []
+   },
+   "review_zoom": {
+    "errors": 667,
+    "course_errors": 38,
+    "words": 12367,
+    "model@0.05": {
+     "caught": 145,
+     "course_caught": 4,
+     "review_minutes": 3.61
+    },
+    "model@0.1": {
+     "caught": 289,
+     "course_caught": 15,
+     "review_minutes": 7.26
+    },
+    "model@0.15": {
+     "caught": 392,
+     "course_caught": 17,
+     "review_minutes": 10.89
+    },
+    "model@0.2": {
+     "caught": 439,
+     "course_caught": 25,
+     "review_minutes": 14.54
+    },
+    "disagreement_only@0.05": {
+     "caught": 169,
+     "course_caught": 6,
+     "review_minutes": 3.62
+    },
+    "disagreement_only@0.1": {
+     "caught": 290,
+     "course_caught": 15,
+     "review_minutes": 7.27
+    },
+    "disagreement_only@0.15": {
+     "caught": 389,
+     "course_caught": 16,
+     "review_minutes": 10.91
+    },
+    "disagreement_only@0.2": {
+     "caught": 447,
+     "course_caught": 25,
+     "review_minutes": 14.55
+    },
+    "course_first@0.05": {
+     "caught": 171,
+     "course_caught": 14,
+     "review_minutes": 3.64
+    },
+    "course_first@0.1": {
+     "caught": 290,
+     "course_caught": 15,
+     "review_minutes": 7.27
+    },
+    "course_first@0.15": {
+     "caught": 389,
+     "course_caught": 16,
+     "review_minutes": 10.91
+    },
+    "course_first@0.2": {
+     "caught": 447,
+     "course_caught": 25,
+     "review_minutes": 14.55
+    },
+    "random@0.05": {
+     "caught": 43,
+     "course_caught": 2,
+     "review_minutes": 3.63
+    },
+    "random@0.1": {
+     "caught": 88,
+     "course_caught": 4,
+     "review_minutes": 7.27
+    },
+    "random@0.15": {
+     "caught": 125,
+     "course_caught": 5,
+     "review_minutes": 10.9
+    },
+    "random@0.2": {
+     "caught": 164,
+     "course_caught": 11,
+     "review_minutes": 14.54
+    }
+   },
+   "corrections_whisper": {
+    "kept": 8,
+    "fixed": 2,
+    "broke": 2,
+    "still_wrong": 2,
+    "by_source": {
+     "second": {
+      "kept": 8,
+      "fixed": 2,
+      "broke": 2,
+      "still_wrong": 2
+     }
+    },
+    "examples": [
+     {
+      "t": 111.9,
+      "end": 112.32,
+      "from": "censoring,",
+      "to": "centering,",
+      "source": "second",
+      "delta": 2.694,
+      "outcome": "fixed"
+     },
+     {
+      "t": 397.48,
+      "end": 398.0,
+      "from": "Succi Serio,",
+      "to": "Suchisari,",
+      "source": "second",
+      "delta": 1.937,
+      "outcome": "still_wrong"
+     },
+     {
+      "t": 1509.64,
+      "end": 1510.24,
+      "from": "centering,",
+      "to": "censoring,",
+      "source": "second",
+      "delta": 2.959,
+      "outcome": "broke"
+     },
+     {
+      "t": 2929.72,
+      "end": 2930.1,
+      "from": "Psych ER",
+      "to": "Psyche-ER",
+      "source": "second",
+      "delta": 1.215,
+      "outcome": "fixed"
+     },
+     {
+      "t": 3495.3,
+      "end": 3495.64,
+      "from": "real time",
+      "to": "real-time",
+      "source": "second",
+      "delta": 2.158,
+      "outcome": "neither"
+     },
+     {
+      "t": 3881.4,
+      "end": 3882.2,
+      "from": "under diagnosed",
+      "to": "underdiagnosed",
+      "source": "second",
+      "delta": 3.061,
+      "outcome": "broke"
+     },
+     {
+      "t": 3938.28,
+      "end": 3939.32,
+      "from": "evaluate the adaptability",
+      "to": "value interpretability",
+      "source": "second",
+      "delta": 3.576,
+      "outcome": "still_wrong"
+     },
+     {
+      "t": 4008.04,
+      "end": 4008.52,
+      "from": "100th",
+      "to": "hundredth",
+      "source": "second",
+      "delta": 0.725,
+      "outcome": "neither"
+     }
+    ]
+   },
+   "review_whisper": {
+    "errors": 627,
+    "course_errors": 40,
+    "words": 12254,
+    "model@0.05": {
+     "caught": 156,
+     "course_caught": 8,
+     "review_minutes": 3.63
+    },
+    "model@0.1": {
+     "caught": 249,
+     "course_caught": 21,
+     "review_minutes": 7.27
+    },
+    "model@0.15": {
+     "caught": 319,
+     "course_caught": 23,
+     "review_minutes": 10.9
+    },
+    "model@0.2": {
+     "caught": 377,
+     "course_caught": 27,
+     "review_minutes": 14.52
+    },
+    "disagreement_only@0.05": {
+     "caught": 156,
+     "course_caught": 10,
+     "review_minutes": 3.63
+    },
+    "disagreement_only@0.1": {
+     "caught": 235,
+     "course_caught": 18,
+     "review_minutes": 7.27
+    },
+    "disagreement_only@0.15": {
+     "caught": 311,
+     "course_caught": 23,
+     "review_minutes": 10.89
+    },
+    "disagreement_only@0.2": {
+     "caught": 362,
+     "course_caught": 26,
+     "review_minutes": 14.53
+    },
+    "course_first@0.05": {
+     "caught": 156,
+     "course_caught": 10,
+     "review_minutes": 3.63
+    },
+    "course_first@0.1": {
+     "caught": 235,
+     "course_caught": 18,
+     "review_minutes": 7.27
+    },
+    "course_first@0.15": {
+     "caught": 311,
+     "course_caught": 23,
+     "review_minutes": 10.89
+    },
+    "course_first@0.2": {
+     "caught": 362,
+     "course_caught": 26,
+     "review_minutes": 14.53
+    },
+    "random@0.05": {
+     "caught": 33,
+     "course_caught": 2,
+     "review_minutes": 3.63
+    },
+    "random@0.1": {
+     "caught": 79,
+     "course_caught": 6,
+     "review_minutes": 7.26
+    },
+    "random@0.15": {
+     "caught": 120,
+     "course_caught": 9,
+     "review_minutes": 10.9
+    },
+    "random@0.2": {
+     "caught": 151,
+     "course_caught": 9,
+     "review_minutes": 14.52
+    }
+   },
+   "timing": {
+    "check_zoom": 122.4,
+    "check_whisper": 0.0
+   }
+  },
+  {
+   "id": "6.S897-05",
+   "course": "6.S897 Machine Learning for Healthcare (Spring 2019)",
+   "title": "Risk Stratification, Part 2",
+   "minutes": 80.1,
+   "slide_terms": 69,
+   "zoom": {
+    "wer": 0.046,
+    "ref_words": 14255,
+    "substitutions": 225,
+    "deletions": 123,
+    "insertions": 308,
+    "rare_total": 183,
+    "rare_correct": 169,
+    "term_total": 193,
+    "term_correct": 185,
+    "term_false": 6,
+    "course_total": 297,
+    "course_correct": 279,
+    "course_false": 23
+   },
+   "zoom_vocab": {
+    "wer": 0.0483,
+    "ref_words": 14255,
+    "substitutions": 247,
+    "deletions": 131,
+    "insertions": 310,
+    "rare_total": 183,
+    "rare_correct": 169,
+    "term_total": 193,
+    "term_correct": 189,
+    "term_false": 11,
+    "course_total": 297,
+    "course_correct": 281,
+    "course_false": 43
+   },
+   "whisper": {
+    "wer": 0.0563,
+    "ref_words": 14255,
+    "substitutions": 272,
+    "deletions": 213,
+    "insertions": 317,
+    "rare_total": 183,
+    "rare_correct": 157,
+    "term_total": 193,
+    "term_correct": 178,
+    "term_false": 3,
+    "course_total": 297,
+    "course_correct": 264,
+    "course_false": 36
+   },
+   "whisper_primed": {
+    "wer": 0.0546,
+    "ref_words": 14255,
+    "substitutions": 265,
+    "deletions": 155,
+    "insertions": 359,
+    "rare_total": 183,
+    "rare_correct": 158,
+    "term_total": 193,
+    "term_correct": 181,
+    "term_false": 6,
+    "course_total": 297,
+    "course_correct": 266,
+    "course_false": 39
+   },
+   "captionfix_zoom": {
+    "wer": 0.0462,
+    "ref_words": 14255,
+    "substitutions": 226,
+    "deletions": 124,
+    "insertions": 308,
+    "rare_total": 183,
+    "rare_correct": 168,
+    "term_total": 193,
+    "term_correct": 184,
+    "term_false": 6,
+    "course_total": 297,
+    "course_correct": 278,
+    "course_false": 24
+   },
+   "captionfix_whisper": {
+    "wer": 0.0558,
+    "ref_words": 14255,
+    "substitutions": 270,
+    "deletions": 216,
+    "insertions": 310,
+    "rare_total": 183,
+    "rare_correct": 158,
+    "term_total": 193,
+    "term_correct": 178,
+    "term_false": 4,
+    "course_total": 297,
+    "course_correct": 265,
+    "course_false": 39
+   },
+   "corrections_zoom": {
+    "kept": 3,
+    "fixed": 0,
+    "broke": 0,
+    "still_wrong": 2,
+    "by_source": {
+     "second": {
+      "kept": 3,
+      "fixed": 0,
+      "broke": 0,
+      "still_wrong": 2
+     }
+    },
+    "examples": [
+     {
+      "t": 2359.6,
+      "end": 2359.61,
+      "from": "checkups",
+      "to": "checkouts",
+      "source": "second",
+      "delta": 2.368,
+      "outcome": "still_wrong"
+     },
+     {
+      "t": 2512.95,
+      "end": 2513.42,
+      "from": "4-month",
+      "to": "four-month",
+      "source": "second",
+      "delta": 2.127,
+      "outcome": "neither"
+     },
+     {
+      "t": 3889.62,
+      "end": 3890.54,
+      "from": "Nargis Razavian, so",
+      "to": "Nargazor Zavian,",
+      "source": "second",
+      "delta": 4.992,
+      "outcome": "still_wrong"
+     }
+    ]
+   },
+   "review_zoom": {
+    "errors": 586,
+    "course_errors": 40,
+    "words": 13933,
+    "model@0.05": {
+     "caught": 143,
+     "course_caught": 10,
+     "review_minutes": 4.0
+    },
+    "model@0.1": {
+     "caught": 250,
+     "course_caught": 17,
+     "review_minutes": 8.01
+    },
+    "model@0.15": {
+     "caught": 344,
+     "course_caught": 19,
+     "review_minutes": 12.02
+    },
+    "model@0.2": {
+     "caught": 394,
+     "course_caught": 22,
+     "review_minutes": 16.03
+    },
+    "disagreement_only@0.05": {
+     "caught": 137,
+     "course_caught": 11,
+     "review_minutes": 3.99
+    },
+    "disagreement_only@0.1": {
+     "caught": 271,
+     "course_caught": 17,
+     "review_minutes": 8.01
+    },
+    "disagreement_only@0.15": {
+     "caught": 346,
+     "course_caught": 19,
+     "review_minutes": 12.01
+    },
+    "disagreement_only@0.2": {
+     "caught": 392,
+     "course_caught": 22,
+     "review_minutes": 16.01
+    },
+    "course_first@0.05": {
+     "caught": 123,
+     "course_caught": 12,
+     "review_minutes": 3.99
+    },
+    "course_first@0.1": {
+     "caught": 271,
+     "course_caught": 17,
+     "review_minutes": 8.01
+    },
+    "course_first@0.15": {
+     "caught": 346,
+     "course_caught": 19,
+     "review_minutes": 12.01
+    },
+    "course_first@0.2": {
+     "caught": 392,
+     "course_caught": 22,
+     "review_minutes": 16.01
+    },
+    "random@0.05": {
+     "caught": 30,
+     "course_caught": 1,
+     "review_minutes": 3.99
+    },
+    "random@0.1": {
+     "caught": 61,
+     "course_caught": 4,
+     "review_minutes": 8.01
+    },
+    "random@0.15": {
+     "caught": 98,
+     "course_caught": 6,
+     "review_minutes": 12.01
+    },
+    "random@0.2": {
+     "caught": 141,
+     "course_caught": 6,
+     "review_minutes": 16.01
+    }
+   },
+   "corrections_whisper": {
+    "kept": 7,
+    "fixed": 1,
+    "broke": 2,
+    "still_wrong": 3,
+    "by_source": {
+     "second": {
+      "kept": 6,
+      "fixed": 1,
+      "broke": 2,
+      "still_wrong": 2
+     },
+     "loop": {
+      "kept": 1,
+      "fixed": 0,
+      "broke": 0,
+      "still_wrong": 1
+     }
+    },
+    "examples": [
+     {
+      "t": 207.7,
+      "end": 208.78,
+      "from": "conjecture,",
+      "to": "Conjuncture,",
+      "source": "second",
+      "delta": 4.34,
+      "outcome": "broke"
+     },
+     {
+      "t": 891.44,
+      "end": 892.06,
+      "from": "Fee KB",
+      "to": "FeeKB",
+      "source": "second",
+      "delta": 1.078,
+      "outcome": "still_wrong"
+     },
+     {
+      "t": 2568.34,
+      "end": 2568.58,
+      "from": "x-axis",
+      "to": "accesses",
+      "source": "second",
+      "delta": 4.337,
+      "outcome": "broke"
+     },
+     {
+      "t": 2657.34,
+      "end": 2658.14,
+      "from": "wrist-traumatication",
+      "to": "risk-travelation",
+      "source": "second",
+      "delta": 2.762,
+      "outcome": "still_wrong"
+     },
+     {
+      "t": 3809.1,
+      "end": 3809.48,
+      "from": "Grado,",
+      "to": "Corrado,",
+      "source": "second",
+      "delta": 0.952,
+      "outcome": "fixed"
+     },
+     {
+      "t": 4255.08,
+      "end": 4255.96,
+      "from": "inclusion exclusion",
+      "to": "inclusion-exclusion",
+      "source": "second",
+      "delta": 0.79,
+      "outcome": "neither"
+     },
+     {
+      "t": 3151.56,
+      "end": 3153.6,
+      "from": "set here? What's the test set here? What's the test set here? What's the test",
+      "to": "set here? What's the difference between 1 and 3?",
+      "source": "loop",
+      "delta": null,
+      "outcome": "still_wrong"
+     }
+    ]
+   },
+   "review_whisper": {
+    "errors": 642,
+    "course_errors": 75,
+    "words": 13789,
+    "model@0.05": {
+     "caught": 158,
+     "course_caught": 28,
+     "review_minutes": 3.99
+    },
+    "model@0.1": {
+     "caught": 293,
+     "course_caught": 37,
+     "review_minutes": 7.99
+    },
+    "model@0.15": {
+     "caught": 377,
+     "course_caught": 46,
+     "review_minutes": 12.01
+    },
+    "model@0.2": {
+     "caught": 438,
+     "course_caught": 52,
+     "review_minutes": 16.02
+    },
+    "disagreement_only@0.05": {
+     "caught": 177,
+     "course_caught": 33,
+     "review_minutes": 4.0
+    },
+    "disagreement_only@0.1": {
+     "caught": 293,
+     "course_caught": 44,
+     "review_minutes": 8.0
+    },
+    "disagreement_only@0.15": {
+     "caught": 386,
+     "course_caught": 51,
+     "review_minutes": 12.01
+    },
+    "disagreement_only@0.2": {
+     "caught": 441,
+     "course_caught": 57,
+     "review_minutes": 16.01
+    },
+    "course_first@0.05": {
+     "caught": 177,
+     "course_caught": 33,
+     "review_minutes": 4.0
+    },
+    "course_first@0.1": {
+     "caught": 293,
+     "course_caught": 44,
+     "review_minutes": 8.0
+    },
+    "course_first@0.15": {
+     "caught": 386,
+     "course_caught": 51,
+     "review_minutes": 12.01
+    },
+    "course_first@0.2": {
+     "caught": 441,
+     "course_caught": 57,
+     "review_minutes": 16.01
+    },
+    "random@0.05": {
+     "caught": 41,
+     "course_caught": 8,
+     "review_minutes": 3.99
+    },
+    "random@0.1": {
+     "caught": 85,
+     "course_caught": 14,
+     "review_minutes": 8.0
+    },
+    "random@0.15": {
+     "caught": 110,
+     "course_caught": 14,
+     "review_minutes": 12.01
+    },
+    "random@0.2": {
+     "caught": 146,
+     "course_caught": 23,
+     "review_minutes": 16.01
+    }
+   },
+   "timing": {
+    "check_zoom": 122.0,
+    "check_whisper": 0.0
+   }
+  },
+  {
+   "id": "6.S897-06",
+   "course": "6.S897 Machine Learning for Healthcare (Spring 2019)",
+   "title": "Physiological Time-Series",
+   "minutes": 81.0,
+   "slide_terms": 85,
+   "zoom": {
+    "wer": 0.0453,
+    "ref_words": 13040,
+    "substitutions": 191,
+    "deletions": 197,
+    "insertions": 203,
+    "rare_total": 254,
+    "rare_correct": 239,
+    "term_total": 187,
+    "term_correct": 181,
+    "term_false": 8,
+    "course_total": 329,
+    "course_correct": 312,
+    "course_false": 23
+   },
+   "zoom_vocab": {
+    "wer": 0.0454,
+    "ref_words": 13040,
+    "substitutions": 184,
+    "deletions": 198,
+    "insertions": 210,
+    "rare_total": 254,
+    "rare_correct": 244,
+    "term_total": 187,
+    "term_correct": 185,
+    "term_false": 9,
+    "course_total": 329,
+    "course_correct": 318,
+    "course_false": 22
+   },
+   "whisper": {
+    "wer": 0.0469,
+    "ref_words": 13040,
+    "substitutions": 176,
+    "deletions": 232,
+    "insertions": 203,
+    "rare_total": 254,
+    "rare_correct": 238,
+    "term_total": 187,
+    "term_correct": 181,
+    "term_false": 7,
+    "course_total": 329,
+    "course_correct": 312,
+    "course_false": 19
+   },
+   "whisper_primed": {
+    "wer": 0.0478,
+    "ref_words": 13040,
+    "substitutions": 175,
+    "deletions": 197,
+    "insertions": 251,
+    "rare_total": 254,
+    "rare_correct": 238,
+    "term_total": 187,
+    "term_correct": 180,
+    "term_false": 7,
+    "course_total": 329,
+    "course_correct": 311,
+    "course_false": 23
+   },
+   "captionfix_zoom": {
+    "wer": 0.0455,
+    "ref_words": 13040,
+    "substitutions": 193,
+    "deletions": 196,
+    "insertions": 204,
+    "rare_total": 254,
+    "rare_correct": 238,
+    "term_total": 187,
+    "term_correct": 181,
+    "term_false": 8,
+    "course_total": 329,
+    "course_correct": 311,
+    "course_false": 24
+   },
+   "captionfix_whisper": {
+    "wer": 0.0467,
+    "ref_words": 13040,
+    "substitutions": 174,
+    "deletions": 233,
+    "insertions": 202,
+    "rare_total": 254,
+    "rare_correct": 241,
+    "term_total": 187,
+    "term_correct": 182,
+    "term_false": 7,
+    "course_total": 329,
+    "course_correct": 315,
+    "course_false": 20
+   },
+   "corrections_zoom": {
+    "kept": 3,
+    "fixed": 0,
+    "broke": 2,
+    "still_wrong": 1,
+    "by_source": {
+     "second": {
+      "kept": 3,
+      "fixed": 0,
+      "broke": 2,
+      "still_wrong": 1
+     }
+    },
+    "examples": [
+     {
+      "t": 69.18,
+      "end": 69.69,
+      "from": "formalize",
+      "to": "form-wise",
+      "source": "second",
+      "delta": 4.975,
+      "outcome": "broke"
+     },
+     {
+      "t": 3747.2,
+      "end": 3747.67,
+      "from": "skips",
+      "to": "skits",
+      "source": "second",
+      "delta": 3.752,
+      "outcome": "broke"
+     },
+     {
+      "t": 4418.72,
+      "end": 4419.6,
+      "from": "\u2014 they",
+      "to": "they'd",
+      "source": "second",
+      "delta": 11.427,
+      "outcome": "still_wrong"
+     }
+    ]
+   },
+   "review_zoom": {
+    "errors": 487,
+    "course_errors": 37,
+    "words": 12625,
+    "model@0.05": {
+     "caught": 100,
+     "course_caught": 7,
+     "review_minutes": 4.04
+    },
+    "model@0.1": {
+     "caught": 217,
+     "course_caught": 17,
+     "review_minutes": 8.09
+    },
+    "model@0.15": {
+     "caught": 276,
+     "course_caught": 20,
+     "review_minutes": 12.13
+    },
+    "model@0.2": {
+     "caught": 330,
+     "course_caught": 27,
+     "review_minutes": 16.19
+    },
+    "disagreement_only@0.05": {
+     "caught": 124,
+     "course_caught": 9,
+     "review_minutes": 4.04
+    },
+    "disagreement_only@0.1": {
+     "caught": 215,
+     "course_caught": 17,
+     "review_minutes": 8.1
+    },
+    "disagreement_only@0.15": {
+     "caught": 277,
+     "course_caught": 20,
+     "review_minutes": 12.14
+    },
+    "disagreement_only@0.2": {
+     "caught": 328,
+     "course_caught": 26,
+     "review_minutes": 16.19
+    },
+    "course_first@0.05": {
+     "caught": 132,
+     "course_caught": 13,
+     "review_minutes": 4.02
+    },
+    "course_first@0.1": {
+     "caught": 215,
+     "course_caught": 17,
+     "review_minutes": 8.1
+    },
+    "course_first@0.15": {
+     "caught": 277,
+     "course_caught": 20,
+     "review_minutes": 12.14
+    },
+    "course_first@0.2": {
+     "caught": 328,
+     "course_caught": 26,
+     "review_minutes": 16.19
+    },
+    "random@0.05": {
+     "caught": 49,
+     "course_caught": 3,
+     "review_minutes": 4.04
+    },
+    "random@0.1": {
+     "caught": 68,
+     "course_caught": 5,
+     "review_minutes": 8.09
+    },
+    "random@0.15": {
+     "caught": 84,
+     "course_caught": 5,
+     "review_minutes": 12.15
+    },
+    "random@0.2": {
+     "caught": 112,
+     "course_caught": 5,
+     "review_minutes": 16.18
+    }
+   },
+   "corrections_whisper": {
+    "kept": 5,
+    "fixed": 3,
+    "broke": 1,
+    "still_wrong": 1,
+    "by_source": {
+     "second": {
+      "kept": 5,
+      "fixed": 3,
+      "broke": 1,
+      "still_wrong": 1
+     }
+    },
+    "examples": [
+     {
+      "t": 314.24,
+      "end": 314.78,
+      "from": "log normal,",
+      "to": "lognormal,",
+      "source": "second",
+      "delta": 0.597,
+      "outcome": "broke"
+     },
+     {
+      "t": 362.66,
+      "end": 363.14,
+      "from": "covariance",
+      "to": "covariate",
+      "source": "second",
+      "delta": 0.567,
+      "outcome": "fixed"
+     },
+     {
+      "t": 1097.12,
+      "end": 1097.56,
+      "from": "C statistic,",
+      "to": "C-statisticated,",
+      "source": "second",
+      "delta": 1.022,
+      "outcome": "still_wrong"
+     },
+     {
+      "t": 1997.02,
+      "end": 1997.7,
+      "from": "wrist shot vacation,",
+      "to": "risk stratification,",
+      "source": "second",
+      "delta": 0.76,
+      "outcome": "fixed"
+     },
+     {
+      "t": 3609.18,
+      "end": 3609.4,
+      "from": "approximate",
+      "to": "proximate",
+      "source": "second",
+      "delta": 1.651,
+      "outcome": "fixed"
+     }
+    ]
+   },
+   "review_whisper": {
+    "errors": 477,
+    "course_errors": 33,
+    "words": 12539,
+    "model@0.05": {
+     "caught": 145,
+     "course_caught": 2,
+     "review_minutes": 4.04
+    },
+    "model@0.1": {
+     "caught": 209,
+     "course_caught": 7,
+     "review_minutes": 8.1
+    },
+    "model@0.15": {
+     "caught": 258,
+     "course_caught": 15,
+     "review_minutes": 12.14
+    },
+    "model@0.2": {
+     "caught": 299,
+     "course_caught": 18,
+     "review_minutes": 16.2
+    },
+    "disagreement_only@0.05": {
+     "caught": 151,
+     "course_caught": 4,
+     "review_minutes": 4.04
+    },
+    "disagreement_only@0.1": {
+     "caught": 206,
+     "course_caught": 7,
+     "review_minutes": 8.09
+    },
+    "disagreement_only@0.15": {
+     "caught": 266,
+     "course_caught": 19,
+     "review_minutes": 12.14
+    },
+    "disagreement_only@0.2": {
+     "caught": 301,
+     "course_caught": 19,
+     "review_minutes": 16.19
+    },
+    "course_first@0.05": {
+     "caught": 151,
+     "course_caught": 4,
+     "review_minutes": 4.04
+    },
+    "course_first@0.1": {
+     "caught": 206,
+     "course_caught": 7,
+     "review_minutes": 8.09
+    },
+    "course_first@0.15": {
+     "caught": 266,
+     "course_caught": 19,
+     "review_minutes": 12.14
+    },
+    "course_first@0.2": {
+     "caught": 301,
+     "course_caught": 19,
+     "review_minutes": 16.19
+    },
+    "random@0.05": {
+     "caught": 27,
+     "course_caught": 4,
+     "review_minutes": 4.05
+    },
+    "random@0.1": {
+     "caught": 54,
+     "course_caught": 7,
+     "review_minutes": 8.1
+    },
+    "random@0.15": {
+     "caught": 90,
+     "course_caught": 7,
+     "review_minutes": 12.14
+    },
+    "random@0.2": {
+     "caught": 125,
+     "course_caught": 9,
+     "review_minutes": 16.17
+    }
+   },
+   "timing": {
+    "check_zoom": 114.2,
+    "check_whisper": 0.0
+   }
+  }
+ ]
+}
