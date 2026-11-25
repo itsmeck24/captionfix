@@ -37,7 +37,7 @@ h1, h2, h3, p, ul, figure { margin: 0; }
 /* type */
 .eyebrow { font: 500 12px/1.4 var(--mono); color: var(--blue); letter-spacing: .02em; margin-bottom: 20px; }
 .micro { font: 400 12px/1.55 var(--mono); color: var(--muted); }
-h1 { font: 700 clamp(2.8rem, 7.4vw, 6.2rem)/.98 var(--sans); letter-spacing: -.045em; }
+h1 { font: 700 clamp(2.5rem, 5.4vw, 4.6rem)/1.02 var(--sans); letter-spacing: -.04em; }
 h2 { font: 700 clamp(2.1rem, 4.6vw, 3.7rem)/1.02 var(--sans); letter-spacing: -.04em; }
 h3 { font: 600 1.2rem/1.25 var(--sans); letter-spacing: -.01em; }
 h1 em, h2 em { font-style: normal; color: var(--blue); }

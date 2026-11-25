@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>CaptionFix: lecture captions a deaf student can trust</title>
+<title>CaptionFix: lecture captions that get the course words right</title>
 <meta name="description" content="Zoom captions for recorded lectures, checked against a second speech model and the slides. Course terms in doubt are marked for students, and a TA gets a short list to verify the same day.">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230b5cff'/%3E%3Crect x='12' y='38' width='40' height='9' rx='3' fill='%23fff'/%3E%3Crect x='18' y='24' width='28' height='8' rx='3' fill='%23fff' opacity='.6'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -34,9 +34,10 @@
   <div class="hero-grid">
     <div>
       <p class="eyebrow">zoom recordings / accessibility / tested on MIT lectures</p>
-      <h1>captions a deaf student can <em>trust</em>.</h1>
-      <p class="lede">Zoom's captions get almost every word right, except the course terms, and they get those
-        wrong silently. CaptionFix checks them against a second model and the slides, and sends a TA to the
+      <h1>95% right.<br><em>wrong where it counts.</em></h1>
+      <p class="lede">Zoom's lecture captions get almost every word right. The ones they miss are the course
+        terms, the words you search for, write down and get tested on, and they miss them without any warning.
+        CaptionFix double-checks Zoom's captions with a second model and the slides, then points a TA to the
         few minutes that need a human, so verified captions are ready the same day.</p>
       <div class="hero-actions">
         <a class="pill" href="#quiz">read it with the sound off ↓</a>
@@ -66,7 +67,7 @@
 <section class="section" id="quiz">
   <div class="wrap">
     <div class="head">
-      <p class="eyebrow">01 / read it like a student who can't hear it</p>
+      <p class="eyebrow">01 / read it with the sound off</p>
       <h2>what did the professor <em>say</em>?</h2>
       <p>Three real Zoom captions from the test lectures, with the sound off. One word in each is wrong.
         Pick what you think was said, then hear it.</p>
@@ -93,12 +94,12 @@
   <div class="wrap">
     <div class="head">
       <p class="eyebrow">03 / the problem</p>
-      <h2>right on "the", wrong on the words that matter.</h2>
+      <h2>a lot of students read the lecture.</h2>
     </div>
     <div class="two">
       <div class="points">
-        <p><b>Students depend on captions.</b> Deaf and hard of hearing students, students listening in a
-          second language, anyone rewatching at 2x. The 2024 ADA Title II rule asks public universities to make
+        <p><b>Captions are how many students take in a lecture.</b> Students who are deaf or hard of hearing,
+          students listening in a second language, anyone watching muted in a library or rewatching at 2x. The 2024 ADA Title II rule asks public universities to make
           recorded lectures meet WCAG 2.1 AA.</p>
         <p><b>Auto captions fail where it hurts, and quietly.</b> <span id="problem-rate"></span> A wrong caption
           looks exactly as sure of itself as a right one.</p>

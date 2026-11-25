@@ -2,7 +2,7 @@
 
 [![tests](https://github.com/itsmeck24/captionfix/actions/workflows/ci.yml/badge.svg)](https://github.com/itsmeck24/captionfix/actions/workflows/ci.yml)
 
-Lecture captions that a student who can't hear the lecture can trust.
+Lecture captions that get the course words right, for every student who reads them.
 
 **Project page: https://captionfix-chi.vercel.app** (try the sound-off quiz and the student player)
 
